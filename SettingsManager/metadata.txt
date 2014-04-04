@@ -6,9 +6,9 @@ version=0.1
 author=Rémi Bovard
 email=remi.bovard@nyon.ch
 
-homepage=
-tracker=
-repository=
+homepage=https://github.com/sitnyon/qgis-plugin-settings-manager
+tracker=https://github.com/sitnyon/qgis-plugin-settings-manager/issues
+repository=https://github.com/sitnyon/qgis-plugin-settings-manager
 icon=icon.png
 
 experimental=False
