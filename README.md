@@ -3,8 +3,7 @@ Settings Manager
 
 **Settings Manager** is a QGIS plugin to set default *options* and *toolbars visibility*, specific for **SITNyon** users.
 
-Options
--------
+### Options
 
 | Category     | Option                                 |
 | ------------ | -------------------------------------- |
@@ -21,8 +20,7 @@ Options
 |              | Default layers CRS                     |
 | Network      | Use proxy for web access               |
 
-Toolbars
---------
+### Toolbars
 
 | Visible        | Hidden               |
 | ------------   | -------------------- |
