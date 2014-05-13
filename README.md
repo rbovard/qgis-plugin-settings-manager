@@ -20,3 +20,17 @@ Options
 |              | Default projects CRS                   |
 |              | Default layers CRS                     |
 | Network      | Use proxy for web access               |
+
+Toolbars
+--------
+
+| Visible        | Hidden               |
+| ------------   | -------------------- |
+| Attributes     | Advanced digitizing  |
+| Digitizing     | Database             |
+| File           | Help                 |
+| Manage layers  | Label                |
+| Map navigation | Plugins              |
+|                | Raster               |
+|                | Vector               |
+|                | Web                  |
