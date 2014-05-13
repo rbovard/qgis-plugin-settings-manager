@@ -5,20 +5,20 @@ Settings Manager
 
 ### Options
 
-| Category     | Option                                 |
-| ------------ | -------------------------------------- |
-| General      | Show tips at start up                  |
-| System       | Paths for SVG symbols                  |
-| Data sources | Representation for null values         |
-|              | Add PostGIS layers with double click   |
-| Map tools    | Open feature form if one is identified |
-| Composer     | Default font                           |
-| Digitizing   | Default snapping mode                  |
-|              | Default snapping tolerance             |
-| CRS          | On the fly reprojection                |
-|              | Default projects CRS                   |
-|              | Default layers CRS                     |
-| Network      | Use proxy for web access               |
+| Category         | Option                                 |
+| ---------------- | -------------------------------------- |
+| **General**      | Show tips at start up                  |
+| **System**       | Paths for SVG symbols                  |
+| **Data sources** | Representation for null values         |
+|                  | Add PostGIS layers with double click   |
+| **Map tools**    | Open feature form if one is identified |
+| **Composer**     | Default font                           |
+| **Digitizing**   | Default snapping mode                  |
+|                  | Default snapping tolerance             |
+| **CRS**          | On the fly reprojection                |
+|                  | Default projects CRS                   |
+|                  | Default layers CRS                     |
+| **Network**      | Use proxy for web access               |
 
 ### Toolbars
 
