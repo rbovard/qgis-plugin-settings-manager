@@ -32,3 +32,11 @@ Settings Manager
 |                | Raster               |
 |                | Vector               |
 |                | Web                  |
+
+Installation
+------------
+
+### Windows
+
+Copy the folder `SettingsManager` into `C:\Users\<username>\.qgis2\python\plugins`.
+> The files `Makefile`, `resources.qrc` and `ui_settingsmanager.ui` are not necessary.
