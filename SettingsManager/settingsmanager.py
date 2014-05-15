@@ -68,6 +68,8 @@ class SettingsManager:
             self.__setOptions()
             self.__setToolbarsVisibility()
 
+            self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
+
     def __setOptions(self):
         s = QSettings()
 
@@ -102,8 +104,6 @@ class SettingsManager:
         s.setValue("proxy/proxyHost", u"193.135.104.6")
         s.setValue("proxy/proxyPort", 8080)
         s.setValue("proxy/proxyType", u"HttpProxy")
-
-        self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
 
     def __setToolbarsVisibility(self):
 
