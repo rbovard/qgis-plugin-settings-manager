@@ -68,9 +68,6 @@ class SettingsManager:
             self.__setSettings()
             self.__setToolbarsVisibility()
 
-            #self.__resetSettings()
-            #self.__hideToolbars()
-
     def __setSettings(self):
         s = QSettings()
 
@@ -108,60 +105,19 @@ class SettingsManager:
 
         self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
 
-    def __resetSettings(self):
-        s = QSettings()
-
-        s.setValue("Qgis/showTips", True)
-
-        s.setValue("svg/searchPathsForSVG", "")
-
-        s.setValue("Qgis/nullValue", u"NULL")
-        s.setValue("Qgis/addPostgisDC", False)
-
-        s.setValue("Map/identifyAutoFeatureForm", False)
-
-        s.setValue("Composer/defaultFont", "")
-
-        s.setValue("Qgis/digitizing/default_snap_mode", u"off")
-        s.setValue("Qgis/digitizing/default_snapping_tolerance", 0)
-
-        s.setValue("Projections/otfTransformAutoEnable", True)
-        s.setValue("Projections/otfTransformEnabled", True)
-        s.setValue("Projections/projectDefaultCrs", "")
-        s.setValue("Projections/layerDefaultCrs", "")
-
-        s.setValue("proxy/proxyEnabled", False)
-        s.setValue("proxy/proxyHost", "")
-        s.setValue("proxy/proxyPort", "")
-        s.setValue("proxy/proxyType", "")
-
-        self.iface.messageBar().pushMessage(u"Paramètres effacés", level=QgsMessageBar.INFO, duration=3)
-
     def __setToolbarsVisibility(self):
+
+        # Visible
         self.iface.fileToolBar().setVisible(True)
         self.iface.mapNavToolToolBar().setVisible(True)
         self.iface.attributesToolBar().setVisible(True)
         self.iface.layerToolBar().setVisible(True)
         self.iface.digitizeToolBar().setVisible(True)
 
+        # Hidden
         self.iface.advancedDigitizeToolBar().setVisible(False)
         self.iface.databaseToolBar().setVisible(False)
         self.iface.helpToolBar().setVisible(False)
-        self.iface.pluginToolBar().setVisible(False)
-        self.iface.rasterToolBar().setVisible(False)
-        self.iface.vectorToolBar().setVisible(False)
-        self.iface.webToolBar().setVisible(False)
-        self.iface.mainWindow().findChild(QToolBar, "mLabelToolBar").setVisible(False)
-
-    def __hideToolbars(self):
-        self.iface.advancedDigitizeToolBar().setVisible(False)
-        self.iface.attributesToolBar().setVisible(False)
-        self.iface.databaseToolBar().setVisible(False)
-        self.iface.digitizeToolBar().setVisible(False)
-        self.iface.fileToolBar().setVisible(False)
-        self.iface.helpToolBar().setVisible(False)
-        self.iface.layerToolBar().setVisible(False)
-        self.iface.mapNavToolToolBar().setVisible(False)
         self.iface.pluginToolBar().setVisible(False)
         self.iface.rasterToolBar().setVisible(False)
         self.iface.vectorToolBar().setVisible(False)
