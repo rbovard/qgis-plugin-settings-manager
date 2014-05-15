@@ -130,3 +130,9 @@ class SettingsManager:
 
         # Favourites
         s.setValue("browser/favourites", [u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees"])
+
+        # Last paths
+        s.setValue("UI/lastProjectDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
+        s.setValue("UI/lastVectorFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees")
+        s.setValue("UI/lastRasterFileFilterDir", u"\\\\uranus\\SITNYON_GEODONNEES\\010_DONNEES_DE_REFERENCE\\012_ORTHOPHOTO")
+        s.setValue("Qgis/last_embedded_project_path", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
