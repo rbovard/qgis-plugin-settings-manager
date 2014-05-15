@@ -67,6 +67,7 @@ class SettingsManager:
         if result == 1:
             self.__setOptions()
             self.__setToolbarsVisibility()
+            self.__setPaths()
 
             self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
 
@@ -123,3 +124,9 @@ class SettingsManager:
         self.iface.vectorToolBar().setVisible(False)
         self.iface.webToolBar().setVisible(False)
         self.iface.mainWindow().findChild(QToolBar, "mLabelToolBar").setVisible(False)
+
+    def __setPaths(self):
+        s = QSettings()
+
+        # Favourites
+        s.setValue("browser/favourites", [u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees"])
