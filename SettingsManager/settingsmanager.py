@@ -110,11 +110,11 @@ class SettingsManager:
     def __setToolbarsVisibility(self):
 
         # Visible
-        self.iface.fileToolBar().setVisible(True)
-        self.iface.mapNavToolToolBar().setVisible(True)
         self.iface.attributesToolBar().setVisible(True)
-        self.iface.layerToolBar().setVisible(True)
         self.iface.digitizeToolBar().setVisible(True)
+        self.iface.fileToolBar().setVisible(True)
+        self.iface.layerToolBar().setVisible(True)
+        self.iface.mapNavToolToolBar().setVisible(True)
 
         # Hidden
         self.iface.advancedDigitizeToolBar().setVisible(False)
