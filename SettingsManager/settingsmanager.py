@@ -65,46 +65,47 @@ class SettingsManager:
         result = self.dlg.exec_()
 
         if result == 1:
-            self.__setOptions()
+            settings = QSettings()
+
+            self.__setOptions(settings)
             self.__setToolbarsVisibility()
-            self.__setPaths()
+            self.__setPaths(settings)
 
             self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
 
-    def __setOptions(self):
-        s = QSettings()
+    def __setOptions(self, settings):
 
         # General
-        s.setValue("Qgis/showTips", False)
+        settings.setValue("Qgis/showTips", False)
 
         # System
-        s.setValue("svg/searchPathsForSVG", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Impression\\Symboles\\")
+        settings.setValue("svg/searchPathsForSVG", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Impression\\Symboles\\")
 
         # Data sources
-        s.setValue("Qgis/nullValue", "")
-        s.setValue("Qgis/addPostgisDC", True)
+        settings.setValue("Qgis/nullValue", "")
+        settings.setValue("Qgis/addPostgisDC", True)
 
         # Map tools
-        s.setValue("Map/identifyAutoFeatureForm", True)
+        settings.setValue("Map/identifyAutoFeatureForm", True)
 
         # Composer
-        s.setValue("Composer/defaultFont", u"Gill Sans MT")
+        settings.setValue("Composer/defaultFont", u"Gill Sans MT")
 
         # Digitizing
-        s.setValue("Qgis/digitizing/default_snap_mode", u"to vertex and segment")
-        s.setValue("Qgis/digitizing/default_snapping_tolerance", 5)
+        settings.setValue("Qgis/digitizing/default_snap_mode", u"to vertex and segment")
+        settings.setValue("Qgis/digitizing/default_snapping_tolerance", 5)
 
         # CRS
-        s.setValue("Projections/otfTransformAutoEnable", False)
-        s.setValue("Projections/otfTransformEnabled", False)
-        s.setValue("Projections/projectDefaultCrs", u"EPSG:21781")
-        s.setValue("Projections/layerDefaultCrs", u"EPSG:21781")
+        settings.setValue("Projections/otfTransformAutoEnable", False)
+        settings.setValue("Projections/otfTransformEnabled", False)
+        settings.setValue("Projections/projectDefaultCrs", u"EPSG:21781")
+        settings.setValue("Projections/layerDefaultCrs", u"EPSG:21781")
 
         # Network
-        s.setValue("proxy/proxyEnabled", True)
-        s.setValue("proxy/proxyHost", u"193.135.104.6")
-        s.setValue("proxy/proxyPort", 8080)
-        s.setValue("proxy/proxyType", u"HttpProxy")
+        settings.setValue("proxy/proxyEnabled", True)
+        settings.setValue("proxy/proxyHost", u"193.135.104.6")
+        settings.setValue("proxy/proxyPort", 8080)
+        settings.setValue("proxy/proxyType", u"HttpProxy")
 
     def __setToolbarsVisibility(self):
 
@@ -125,14 +126,13 @@ class SettingsManager:
         self.iface.webToolBar().setVisible(False)
         self.iface.mainWindow().findChild(QToolBar, "mLabelToolBar").setVisible(False)
 
-    def __setPaths(self):
-        s = QSettings()
+    def __setPaths(self, settings):
 
         # Favourites
-        s.setValue("browser/favourites", [u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees"])
+        settings.setValue("browser/favourites", [u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees"])
 
         # Last paths
-        s.setValue("UI/lastProjectDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
-        s.setValue("UI/lastVectorFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees")
-        s.setValue("UI/lastRasterFileFilterDir", u"\\\\uranus\\SITNYON_GEODONNEES\\010_DONNEES_DE_REFERENCE\\012_ORTHOPHOTO")
-        s.setValue("Qgis/last_embedded_project_path", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
+        settings.setValue("UI/lastProjectDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
+        settings.setValue("UI/lastVectorFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees")
+        settings.setValue("UI/lastRasterFileFilterDir", u"\\\\uranus\\SITNYON_GEODONNEES\\010_DONNEES_DE_REFERENCE\\012_ORTHOPHOTO")
+        settings.setValue("Qgis/last_embedded_project_path", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
