@@ -65,10 +65,10 @@ class SettingsManager:
         result = self.dlg.exec_()
 
         if result == 1:
-            self.__setSettings()
+            self.__setOptions()
             self.__setToolbarsVisibility()
 
-    def __setSettings(self):
+    def __setOptions(self):
         s = QSettings()
 
         # General
