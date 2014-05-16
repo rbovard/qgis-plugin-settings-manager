@@ -1,8 +1,8 @@
 [general]
 name=Settings Manager
 qgisMinimumVersion=2.0
-description=Settings Manager
-version=0.1
+description=Paramètres SITNyon
+version=1.1.0
 author=Rémi Bovard
 email=remi.bovard@nyon.ch
 
