@@ -10,7 +10,7 @@ Settings Manager
 
 | Category         | Option                                 |
 | ---------------- | -------------------------------------- |
-| **General**      | Show tips at start up                  |
+| **General**      | Don't show tips at start up            |
 | **System**       | Paths for SVG symbols                  |
 | **Data sources** | Representation for null values         |
 |                  | Add PostGIS layers with double click   |
@@ -18,7 +18,7 @@ Settings Manager
 | **Composer**     | Default font                           |
 | **Digitizing**   | Default snapping mode                  |
 |                  | Default snapping tolerance             |
-| **CRS**          | On the fly reprojection                |
+| **CRS**          | Disable on the fly reprojection        |
 |                  | Default projects CRS                   |
 |                  | Default layers CRS                     |
 | **Network**      | Use proxy for web access               |
