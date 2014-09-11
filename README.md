@@ -45,6 +45,11 @@ Settings Manager
 * Last raster file
 * Last embedded project
 
+### WMS connections
+
+* ASIT VD
+* Vaud
+
 Installation
 ------------
 
