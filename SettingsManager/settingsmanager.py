@@ -71,6 +71,7 @@ class SettingsManager:
             self.__setToolbarsVisibility()
             self.__setPaths(settings)
             self.__setWmsConnections(settings)
+            self.__setPluginsSettings(settings)
 
             self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
 
@@ -158,3 +159,7 @@ class SettingsManager:
         settings.setValue("Qgis/connections-wms/Vaud/ignoreGetMapURI", False)
         settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
         settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
+
+    def __setPluginsSettings(self, settings):
+
+        settings.setValue("Qgis/plugin-installer/allowExperimental", True) # Allows experimental plugins but doesn't check the checkbox...

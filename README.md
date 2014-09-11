@@ -6,6 +6,7 @@ Settings Manager
 * Toolbars visibility
 * Paths
 * WMS connections
+* Plugins settings
 
 ### Options
 
@@ -50,6 +51,10 @@ Settings Manager
 
 * ASIT VD
 * Vaud
+
+### Plugins settings
+
+* Allow experimental plugins
 
 Installation
 ------------
