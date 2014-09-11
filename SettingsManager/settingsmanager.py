@@ -70,6 +70,8 @@ class SettingsManager:
             self.__setOptions(settings)
             self.__setToolbarsVisibility()
             self.__setPaths(settings)
+            self.__setWmsConnections(settings)
+            self.__setPluginsSettings(settings)
 
             self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
 
@@ -86,6 +88,7 @@ class SettingsManager:
         settings.setValue("Qgis/addPostgisDC", True)
 
         # Map tools
+        settings.setValue("Map/identifyMode", 3)
         settings.setValue("Map/identifyAutoFeatureForm", True)
 
         # Composer
@@ -136,3 +139,27 @@ class SettingsManager:
         settings.setValue("UI/lastVectorFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees")
         settings.setValue("UI/lastRasterFileFilterDir", u"\\\\uranus\\SITNYON_GEODONNEES\\010_DONNEES_DE_REFERENCE\\012_ORTHOPHOTO")
         settings.setValue("Qgis/last_embedded_project_path", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
+
+    def __setWmsConnections(self, settings):
+
+        # ASIT VD
+        settings.setValue("Qgis/connections-wms/ASIT VD/url", u"https://secure.asitvd.ch/proxy/ogc/asitvd-wms-fonds")
+        settings.setValue("Qgis/connections-wms/ASIT VD/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/ASIT VD/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/smoothPixmapTransform", False)
+
+        # Vaud
+        settings.setValue("Qgis/connections-wms/Vaud/url", u"https://secure.asitvd.ch/proxy/ogc/vd-wms")
+        settings.setValue("Qgis/connections-wms/Vaud/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/Vaud/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/Vaud/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/Vaud/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
+
+    def __setPluginsSettings(self, settings):
+
+        settings.setValue("Qgis/plugin-installer/allowExperimental", True) # Allows experimental plugins but doesn't check the checkbox...

@@ -5,6 +5,8 @@ Settings Manager
 * Options
 * Toolbars visibility
 * Paths
+* WMS connections
+* Plugins settings
 
 ### Options
 
@@ -14,7 +16,8 @@ Settings Manager
 | **System**       | Paths for SVG symbols                  |
 | **Data sources** | Representation for null values         |
 |                  | Add PostGIS layers with double click   |
-| **Map tools**    | Open feature form if one is identified |
+| **Map tools**    | Identify with layer selection          |
+|                  | Open feature form if one is identified |
 | **Composer**     | Default font                           |
 | **Digitizing**   | Default snapping mode                  |
 |                  | Default snapping tolerance             |
@@ -43,6 +46,15 @@ Settings Manager
 * Last vector file
 * Last raster file
 * Last embedded project
+
+### WMS connections
+
+* ASIT VD
+* Vaud
+
+### Plugins settings
+
+* Allow experimental plugins
 
 Installation
 ------------
