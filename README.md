@@ -5,6 +5,7 @@ Settings Manager
 * Options
 * Toolbars visibility
 * Paths
+* WMS connections
 
 ### Options
 
