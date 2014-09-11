@@ -14,7 +14,8 @@ Settings Manager
 | **System**       | Paths for SVG symbols                  |
 | **Data sources** | Representation for null values         |
 |                  | Add PostGIS layers with double click   |
-| **Map tools**    | Open feature form if one is identified |
+| **Map tools**    | Identify with layer selection          |
+|                  | Open feature form if one is identified |
 | **Composer**     | Default font                           |
 | **Digitizing**   | Default snapping mode                  |
 |                  | Default snapping tolerance             |

@@ -86,6 +86,7 @@ class SettingsManager:
         settings.setValue("Qgis/addPostgisDC", True)
 
         # Map tools
+        settings.setValue("Map/identifyMode", 3)
         settings.setValue("Map/identifyAutoFeatureForm", True)
 
         # Composer
