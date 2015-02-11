@@ -1,6 +1,12 @@
 Settings Manager
 ================
 
+* [Features](#features)
+* [Installation](#installation)
+
+Features
+--------
+
 **Settings Manager** is a QGIS plugin to set default settings, specific for **SITNyon** users:
 * Options
 * Toolbars visibility
