@@ -2,17 +2,19 @@ Settings Manager
 ================
 
 * [Features](#features)
+    * [Options](#options)
+    * [Toolbars visibility](#toolbars)
+    * [Paths](#paths)
+    * [WMS connections](#wms-connections)
+    * [Plugins settings](#plugins-settings)
 * [Installation](#installation)
+    * [Windows](#windows)
+    * [Linux](#linux)
 
 Features
 --------
 
 **Settings Manager** is a QGIS plugin to set default settings, specific for **SITNyon** users.
-* [Options](#options)
-* [Toolbars visibility](#toolbars)
-* [Paths](#paths)
-* [WMS connections](#wms-connections)
-* [Plugins settings](#plugins-settings)
 
 ### Options
 
