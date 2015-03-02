@@ -50,9 +50,7 @@ class SettingsManager:
         self.dlg = SettingsManagerDialog()
 
     def initGui(self):
-        self.action = QAction(
-            QIcon(":/plugins/settingsmanager/icon.png"),
-            u"Settings Manager", self.iface.mainWindow())
+        self.action = QAction(QIcon(":/plugins/settingsmanager/icon.png"), u"Settings Manager", self.iface.mainWindow())
 
         self.action.triggered.connect(self.run)
         self.iface.addToolBarIcon(self.action)
@@ -75,7 +73,7 @@ class SettingsManager:
             self.__setWmsConnections(settings)
             self.__setPluginsSettings(settings)
 
-            self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level=QgsMessageBar.INFO, duration=3)
+            self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés", level = QgsMessageBar.INFO, duration = 3)
 
     def __setOptions(self, settings):
 
