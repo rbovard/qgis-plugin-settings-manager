@@ -31,6 +31,8 @@ import os.path
 
 class SettingsManager:
 
+    GEODATA_PATH = u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata"
+
     def __init__(self, iface):
         self.iface = iface
         self.plugin_dir = os.path.dirname(__file__)
@@ -81,7 +83,7 @@ class SettingsManager:
         settings.setValue("Qgis/showTips", False)
 
         # System
-        settings.setValue("svg/searchPathsForSVG", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Impression\\Symboles\\")
+        settings.setValue("svg/searchPathsForSVG", os.path.join(self.GEODATA_PATH, u"Impression\\Symboles"))
 
         # Data sources
         settings.setValue("Qgis/nullValue", "")
@@ -132,13 +134,13 @@ class SettingsManager:
     def __setPaths(self, settings):
 
         # Favourites
-        settings.setValue("browser/favourites", [u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees"])
+        settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, u"Donnees")])
 
         # Last paths
-        settings.setValue("UI/lastProjectDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
-        settings.setValue("UI/lastVectorFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees")
-        settings.setValue("UI/lastRasterFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees\\Orthophotos")
-        settings.setValue("Qgis/last_embedded_project_path", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
+        settings.setValue("UI/lastProjectDir", os.path.join(self.GEODATA_PATH, u"Projets"))
+        settings.setValue("UI/lastVectorFileFilterDir", os.path.join(self.GEODATA_PATH, u"Donnees"))
+        settings.setValue("UI/lastRasterFileFilterDir", os.path.join(self.GEODATA_PATH, u"Donnees\\Orthophotos"))
+        settings.setValue("Qgis/last_embedded_project_path", os.path.join(self.GEODATA_PATH, u"Projets"))
 
     def __setWmsConnections(self, settings):
 
