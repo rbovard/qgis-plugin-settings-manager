@@ -165,4 +165,9 @@ class SettingsManager:
 
     def __setPluginsSettings(self, settings):
 
+        # Check updates
+        settings.setValue("Qgis/plugin-installer/checkOnStart", True)
+        settings.setValue("Qgis/plugin-installer/checkOnStartInterval", 7)
+
+        # Experimental plugins
         settings.setValue("Qgis/plugin-installer/allowExperimental", True) # Allows experimental plugins but doesn't check the checkbox...

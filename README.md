@@ -62,6 +62,7 @@ Features
 
 ### Plugins settings
 
+* Check for updates on startup
 * Allow experimental plugins
 
 Installation
