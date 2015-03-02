@@ -172,6 +172,13 @@ class SettingsManager:
 
     def __setPluginsSettings(self, settings):
 
+        # Enable plugins
+        settings.setValue("Plugins/spatialqueryplugin", True)
+
+        # Disable plugins
+        settings.setValue("Plugins/grassplugin", False)
+        settings.setValue("Plugins/roadgraphplugin", False)
+
         # Check updates
         settings.setValue("Qgis/plugin-installer/checkOnStart", True)
         settings.setValue("Qgis/plugin-installer/checkOnStartInterval", 7)

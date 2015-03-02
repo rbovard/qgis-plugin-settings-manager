@@ -62,7 +62,12 @@ Features
 * Vaud
 * swisstopo
 
-### Plugins settings
+### Plugins
+
+| Enabled      | Disabled  |
+| ------------ | --------- |
+| SpatialQuery | GRASS     |
+|              | RoadGraph |
 
 * Check for updates on startup
 * Allow experimental plugins
