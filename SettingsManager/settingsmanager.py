@@ -150,6 +150,7 @@ class SettingsManager:
         settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetMapURI", False)
         settings.setValue("Qgis/connections-wms/ASIT VD/invertAxisOrientation", False)
         settings.setValue("Qgis/connections-wms/ASIT VD/smoothPixmapTransform", False)
+        settings.setValue("Qgis/WMS/ASIT VD/username", u"vdn")
 
         # Vaud
         settings.setValue("Qgis/connections-wms/Vaud/url", u"https://secure.asitvd.ch/proxy/ogc/vd-wms")
