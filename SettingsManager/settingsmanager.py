@@ -137,7 +137,7 @@ class SettingsManager:
         # Last paths
         settings.setValue("UI/lastProjectDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
         settings.setValue("UI/lastVectorFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees")
-        settings.setValue("UI/lastRasterFileFilterDir", u"\\\\uranus\\SITNYON_GEODONNEES\\010_DONNEES_DE_REFERENCE\\012_ORTHOPHOTO")
+        settings.setValue("UI/lastRasterFileFilterDir", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Donnees\\Orthophotos")
         settings.setValue("Qgis/last_embedded_project_path", u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata\\Projets")
 
     def __setWmsConnections(self, settings):
