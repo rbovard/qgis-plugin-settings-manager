@@ -60,6 +60,7 @@ Features
 
 * ASIT VD
 * Vaud
+* swisstopo
 
 ### Plugins settings
 

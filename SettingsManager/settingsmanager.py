@@ -161,6 +161,15 @@ class SettingsManager:
         settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
         settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
 
+        # swisstopo
+        settings.setValue("Qgis/connections-wms/swisstopo/url", u"http://wms.geo.admin.ch/?lang=fr")
+        settings.setValue("Qgis/connections-wms/swisstopo/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/swisstopo/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/swisstopo/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/swisstopo/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/swisstopo/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/swisstopo/smoothPixmapTransform", False)
+
     def __setPluginsSettings(self, settings):
 
         # Check updates
