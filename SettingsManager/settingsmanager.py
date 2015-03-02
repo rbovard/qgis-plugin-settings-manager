@@ -70,7 +70,7 @@ class SettingsManager:
             self.__setToolbarsVisibility()
             self.__setPaths(settings)
             self.__setWmsConnections(settings)
-            self.__setPluginsSettings(settings)
+            self.__setPlugins(settings)
 
             self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés, redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
 
@@ -170,7 +170,7 @@ class SettingsManager:
         settings.setValue("Qgis/connections-wms/swisstopo/invertAxisOrientation", False)
         settings.setValue("Qgis/connections-wms/swisstopo/smoothPixmapTransform", False)
 
-    def __setPluginsSettings(self, settings):
+    def __setPlugins(self, settings):
 
         # Enable plugins
         settings.setValue("Plugins/spatialqueryplugin", True)
