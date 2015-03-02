@@ -26,6 +26,7 @@ Features
 |                  | Add PostGIS layers with double click   |
 | **Map tools**    | Identify with layer selection          |
 |                  | Open feature form if one is identified |
+|                  | Predefined scales                      |
 | **Composer**     | Default font                           |
 | **Digitizing**   | Default snapping mode                  |
 |                  | Default snapping tolerance             |

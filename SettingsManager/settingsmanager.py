@@ -89,6 +89,7 @@ class SettingsManager:
         # Map tools
         settings.setValue("Map/identifyMode", 3)
         settings.setValue("Map/identifyAutoFeatureForm", True)
+        settings.setValue("Map/scales", u"1:100000,1:50000,1:25000,1:10000,1:5000,1:2500,1:1000,1:500,1:250,1:100")
 
         # Composer
         settings.setValue("Composer/defaultFont", u"Gill Sans MT")
