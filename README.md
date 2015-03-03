@@ -6,7 +6,7 @@ Settings Manager
     * [Toolbars visibility](#toolbars)
     * [Paths](#paths)
     * [WMS connections](#wms-connections)
-    * [Plugins settings](#plugins-settings)
+    * [Plugins](#plugins)
 * [Installation](#installation)
     * [Windows](#windows)
     * [Linux](#linux)
@@ -71,6 +71,7 @@ Features
 
 * Check for updates on startup
 * Allow experimental plugins
+* [List of useful plugins](doc/plugins.md)
 
 Installation
 ------------
