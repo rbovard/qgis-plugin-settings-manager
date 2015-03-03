@@ -72,7 +72,7 @@ class SettingsManager:
             self.__setWmsConnections(settings)
             self.__setPlugins(settings)
 
-            self.iface.messageBar().pushMessage(u"Paramètres SITNyon installés, redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
+            self.iface.messageBar().pushMessage(u"Installation", u"Paramètres SITNyon importés, redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
 
     def __setOptions(self, settings):
 
