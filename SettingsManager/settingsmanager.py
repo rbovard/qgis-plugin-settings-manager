@@ -104,6 +104,9 @@ class SettingsManager:
         settings.setValue("Projections/projectDefaultCrs", u"EPSG:21781")
         settings.setValue("Projections/layerDefaultCrs", u"EPSG:21781")
         settings.setValue("Projections/defaultBehaviour", u"useGlobal")
+        settings.setValue("UI/recentProjections", 1919)
+        settings.setValue("UI/recentProjectionsProj4", u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs")
+        settings.setValue("UI/recentProjectionsAuthId", u"EPSG:21781")
 
         # Network
         settings.setValue("proxy/proxyEnabled", True)
