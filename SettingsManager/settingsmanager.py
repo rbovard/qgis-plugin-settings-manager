@@ -103,6 +103,7 @@ class SettingsManager:
         settings.setValue("Projections/otfTransformEnabled", False)
         settings.setValue("Projections/projectDefaultCrs", u"EPSG:21781")
         settings.setValue("Projections/layerDefaultCrs", u"EPSG:21781")
+        settings.setValue("Projections/defaultBehaviour", u"useGlobal")
 
         # Network
         settings.setValue("proxy/proxyEnabled", True)
