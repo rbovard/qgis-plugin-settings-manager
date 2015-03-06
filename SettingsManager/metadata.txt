@@ -1,6 +1,6 @@
 [general]
 name=Settings Manager
-qgisMinimumVersion=2.0
+qgisMinimumVersion=2.8
 description=Paramètres SITNyon
 about=Configuration QGIS spécifique pour les utilisateurs SITNyon
 version=1.3.0
