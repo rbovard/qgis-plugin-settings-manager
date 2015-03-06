@@ -31,7 +31,7 @@ import os.path
 
 class SettingsManager:
 
-    GEODATA_PATH = u"\\\\jupiter\\VDN_Commun\\SITNyon\\Geodata"
+    GEODATA_PATH = u"\\\\orcus\\SITNyon\\Geodata"
     settings = QSettings()
 
     def __init__(self, iface):
