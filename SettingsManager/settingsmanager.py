@@ -173,6 +173,15 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/Swisstopo/invertAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/Swisstopo/smoothPixmapTransform", False)
 
+        # GeoPlaNet
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/url", u"http://www.geo.vd.ch/main/wsgi/mapserv_proxy")
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/dpiMode", 7)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetFeatureInfoURI", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetMapURI", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/invertAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False)
+
     def __setPlugins(self):
 
         # Enable plugins

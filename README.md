@@ -61,6 +61,7 @@ Features
 * ASIT VD
 * Vaud
 * Swisstopo
+* GeoPlaNet
 
 ### Plugins
 
