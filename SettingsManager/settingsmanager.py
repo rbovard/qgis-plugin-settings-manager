@@ -164,14 +164,14 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
 
-        # swisstopo
-        self.settings.setValue("Qgis/connections-wms/swisstopo/url", u"http://wms.geo.admin.ch/?lang=fr")
-        self.settings.setValue("Qgis/connections-wms/swisstopo/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/swisstopo/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/swisstopo/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/swisstopo/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/swisstopo/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/swisstopo/smoothPixmapTransform", False)
+        # Swisstopo
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/url", u"http://wms.geo.admin.ch/?lang=fr")
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/dpiMode", 7)
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreGetFeatureInfoURI", False)
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreGetMapURI", False)
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/invertAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/smoothPixmapTransform", False)
 
     def __setPlugins(self):
 
