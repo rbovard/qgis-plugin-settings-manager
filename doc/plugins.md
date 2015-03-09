@@ -24,6 +24,11 @@ Export
 * [Quick Export](http://plugins.qgis.org/plugins/QuickExport/): Quick Export adds a new toolbar in QGIS, with 4 actions to export any vector layer to CSV, HTML, PDF and printer
 * [QConsolidate](http://plugins.qgis.org/plugins/qconsolidate/): Consolidate QGIS project into one directory
 
+Search
+------
+
+* [Quick Finder](https://plugins.qgis.org/plugins/quickfinder/): Quick Finder offers a single place to perform searches on project layers and online remote services
+
 Miscellaneous
 -------------
 
