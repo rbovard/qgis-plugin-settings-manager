@@ -164,6 +164,15 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/GeoPlaNet/invertAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False)
 
+        # SITNyon
+        self.settings.setValue("Qgis/connections-wms/SITNyon/url", u"http://map.nyon.ch/prod/wsgi/mapserv_proxy")
+        self.settings.setValue("Qgis/connections-wms/SITNyon/dpiMode", 7)
+        self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreGetFeatureInfoURI", False)
+        self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreGetMapURI", False)
+        self.settings.setValue("Qgis/connections-wms/SITNyon/invertAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/SITNyon/smoothPixmapTransform", False)
+
         # Swisstopo
         self.settings.setValue("Qgis/connections-wms/Swisstopo/url", u"http://wms.geo.admin.ch/?lang=fr")
         self.settings.setValue("Qgis/connections-wms/Swisstopo/dpiMode", 7)

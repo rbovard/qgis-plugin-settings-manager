@@ -60,6 +60,7 @@ Features
 
 * ASIT VD
 * GeoPlaNet
+* SITNyon
 * Swisstopo
 * Vaud
 
