@@ -155,14 +155,14 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/ASIT VD/smoothPixmapTransform", False)
         self.settings.setValue("Qgis/WMS/ASIT VD/username", u"vdn")
 
-        # Vaud
-        self.settings.setValue("Qgis/connections-wms/Vaud/url", u"https://secure.asitvd.ch/proxy/ogc/vd-wms")
-        self.settings.setValue("Qgis/connections-wms/Vaud/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
+        # GeoPlaNet
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/url", u"http://www.geo.vd.ch/main/wsgi/mapserv_proxy")
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/dpiMode", 7)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetFeatureInfoURI", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetMapURI", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/invertAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False)
 
         # Swisstopo
         self.settings.setValue("Qgis/connections-wms/Swisstopo/url", u"http://wms.geo.admin.ch/?lang=fr")
@@ -173,14 +173,14 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/Swisstopo/invertAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/Swisstopo/smoothPixmapTransform", False)
 
-        # GeoPlaNet
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/url", u"http://www.geo.vd.ch/main/wsgi/mapserv_proxy")
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False)
+        # Vaud
+        self.settings.setValue("Qgis/connections-wms/Vaud/url", u"https://secure.asitvd.ch/proxy/ogc/vd-wms")
+        self.settings.setValue("Qgis/connections-wms/Vaud/dpiMode", 7)
+        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreGetFeatureInfoURI", False)
+        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreGetMapURI", False)
+        self.settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
+        self.settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
 
     def __setPlugins(self):
 

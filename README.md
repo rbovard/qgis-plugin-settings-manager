@@ -59,9 +59,9 @@ Features
 ### WMS connections
 
 * ASIT VD
-* Vaud
-* Swisstopo
 * GeoPlaNet
+* Swisstopo
+* Vaud
 
 ### Plugins
 
