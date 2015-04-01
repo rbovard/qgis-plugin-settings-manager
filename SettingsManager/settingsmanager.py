@@ -214,3 +214,15 @@ class SettingsManager:
 
         # Experimental plugins
         self.settings.setValue("Qgis/plugin-installer/allowExperimental", True) # Allows experimental plugins but doesn't check the checkbox...
+
+        # Plugin QuickFinder
+        self.__setPluginQuickFinder()
+
+    def __setPluginQuickFinder(self):
+
+        settings = QSettings("quickfinder_plugin", "quickfinder_plugin")
+
+        settings.setValue("geomapfish", True)
+        settings.setValue("geomapfishUrl", u"http://map.nyon.ch/search")
+        settings.setValue("geomapfishCrs", u"EPSG:21781")
+        settings.setValue("osm", False)
