@@ -220,6 +220,7 @@ class SettingsManager:
 
     def __setPluginQuickFinder(self):
 
+        self.settings.setValue("PythonPlugins/quickfinder", True)
         settings = QSettings("quickfinder_plugin", "quickfinder_plugin")
 
         settings.setValue("geomapfish", True)
