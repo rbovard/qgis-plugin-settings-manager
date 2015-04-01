@@ -66,10 +66,10 @@ Features
 
 ### Plugins
 
-| Enabled      | Disabled  |
-| ------------ | --------- |
-| SpatialQuery | GRASS     |
-|              | RoadGraph |
+| Enabled       | Disabled  |
+| ------------- | --------- |
+| SpatialQuery  | GRASS     |
+| *QuickFinder* | RoadGraph |
 
 * Check for updates on startup
 * Allow experimental plugins

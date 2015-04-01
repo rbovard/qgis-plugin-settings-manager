@@ -1,7 +1,7 @@
 QGIS plugins
 ============
 
-The plugins that should be installed by default are marked with a `*`.
+The plugins installed by default are in **bold**.
 
 Development
 -----------
@@ -29,7 +29,7 @@ Export
 Search
 ------
 
-* [Quick Finder*](https://plugins.qgis.org/plugins/quickfinder/): Quick Finder offers a single place to perform searches on project layers and online remote services
+* [**Quick Finder**](https://plugins.qgis.org/plugins/quickfinder/): Quick Finder offers a single place to perform searches on project layers and online remote services
 
 Miscellaneous
 -------------
