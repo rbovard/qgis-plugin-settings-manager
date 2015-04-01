@@ -73,7 +73,10 @@ Features
 
 * Check for updates on startup
 * Allow experimental plugins
-* [List of useful plugins](doc/plugins.md)
+* Configure plugin
+    * QuickFinder
+
+[List of useful plugins](doc/plugins.md)
 
 Installation
 ------------
