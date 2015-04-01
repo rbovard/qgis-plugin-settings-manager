@@ -221,9 +221,9 @@ class SettingsManager:
     def __setPluginQuickFinder(self):
 
         self.settings.setValue("PythonPlugins/quickfinder", True)
-        settings = QSettings("quickfinder_plugin", "quickfinder_plugin")
+        pluginSettings = QSettings("quickfinder_plugin", "quickfinder_plugin")
 
-        settings.setValue("geomapfish", True)
-        settings.setValue("geomapfishUrl", u"http://map.nyon.ch/search")
-        settings.setValue("geomapfishCrs", u"EPSG:21781")
-        settings.setValue("osm", False)
+        pluginSettings.setValue("geomapfish", True)
+        pluginSettings.setValue("geomapfishUrl", u"http://map.nyon.ch/search")
+        pluginSettings.setValue("geomapfishCrs", u"EPSG:21781")
+        pluginSettings.setValue("osm", False)
