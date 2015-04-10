@@ -6,7 +6,7 @@ Settings Manager
     * [Toolbars visibility](#toolbars)
     * [Paths](#paths)
     * [WMS connections](#wms-connections)
-    * [Plugins settings](#plugins-settings)
+    * [Plugins](#plugins)
 * [Installation](#installation)
     * [Windows](#windows)
     * [Linux](#linux)
@@ -26,6 +26,7 @@ Features
 |                  | Add PostGIS layers with double click   |
 | **Map tools**    | Identify with layer selection          |
 |                  | Open feature form if one is identified |
+|                  | Predefined scales                      |
 | **Composer**     | Default font                           |
 | **Digitizing**   | Default snapping mode                  |
 |                  | Default snapping tolerance             |
@@ -58,11 +59,24 @@ Features
 ### WMS connections
 
 * ASIT VD
+* GeoPlaNet
+* SITNyon
+* Swisstopo
 * Vaud
 
-### Plugins settings
+### Plugins
 
+| Enabled       | Disabled  |
+| ------------- | --------- |
+| SpatialQuery  | GRASS     |
+| *QuickFinder* | RoadGraph |
+
+* Check for updates on startup
 * Allow experimental plugins
+* Configure plugin
+    * QuickFinder
+
+[List of useful plugins](doc/plugins.md)
 
 Installation
 ------------
