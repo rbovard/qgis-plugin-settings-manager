@@ -77,6 +77,7 @@ class SettingsManager:
 
         # General
         self.settings.setValue("Qgis/showTips", False)
+        self.settings.setValue("Qgis/newProjectDefault", True)
 
         # System
         self.settings.setValue("svg/searchPathsForSVG", os.path.join(self.GEODATA_PATH, u"Impression\\Symboles"))

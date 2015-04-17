@@ -21,6 +21,7 @@ Features
 | Category         | Option                                 |
 | ---------------- | -------------------------------------- |
 | **General**      | Don't show tips at start up            |
+|                  | New project from default project       |
 | **System**       | Paths for SVG symbols                  |
 | **Data sources** | Representation for null values         |
 |                  | Add PostGIS layers with double click   |
