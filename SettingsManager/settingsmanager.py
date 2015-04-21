@@ -31,7 +31,7 @@ import os.path
 
 class SettingsManager:
 
-    GEODATA_PATH = u"\\\\orcus\\SITNyon\\Geodata"
+    GEODATA_PATH = os.path.normpath("S:\\")
     settings = QSettings()
 
     def __init__(self, iface):
@@ -81,7 +81,7 @@ class SettingsManager:
         self.settings.setValue("Qgis/newProjectDefault", True)
 
         # System
-        self.settings.setValue("svg/searchPathsForSVG", os.path.join(self.GEODATA_PATH, u"Impression\\Symboles"))
+        self.settings.setValue("svg/searchPathsForSVG", os.path.join(self.GEODATA_PATH, "Impression\Symboles"))
 
         # Data sources
         self.settings.setValue("Qgis/nullValue", "")
@@ -137,13 +137,13 @@ class SettingsManager:
     def __setPaths(self):
 
         # Favourites
-        self.settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, u"Donnees")])
+        self.settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, "Donnees")])
 
         # Last paths
-        self.settings.setValue("UI/lastProjectDir", os.path.join(self.GEODATA_PATH, u"Projets"))
-        self.settings.setValue("UI/lastVectorFileFilterDir", os.path.join(self.GEODATA_PATH, u"Donnees"))
-        self.settings.setValue("UI/lastRasterFileFilterDir", os.path.join(self.GEODATA_PATH, u"Donnees\\Orthophotos"))
-        self.settings.setValue("Qgis/last_embedded_project_path", os.path.join(self.GEODATA_PATH, u"Projets"))
+        self.settings.setValue("UI/lastProjectDir", os.path.join(self.GEODATA_PATH, "Projets"))
+        self.settings.setValue("UI/lastVectorFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees"))
+        self.settings.setValue("UI/lastRasterFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees\Orthophotos"))
+        self.settings.setValue("Qgis/last_embedded_project_path", os.path.join(self.GEODATA_PATH, "Projets"))
 
     def __setWmsConnections(self):
 
