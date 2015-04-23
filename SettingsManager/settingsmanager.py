@@ -145,6 +145,9 @@ class SettingsManager:
         self.settings.setValue("UI/lastRasterFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees\Orthophotos"))
         self.settings.setValue("Qgis/last_embedded_project_path", os.path.join(self.GEODATA_PATH, "Projets"))
 
+        # File filter
+        self.settings.setValue("UI/lastVectorFileFilter", "ESRI Shapefiles (*.shp *.SHP)")
+
     def __setWmsConnections(self):
 
         # ASIT VD
