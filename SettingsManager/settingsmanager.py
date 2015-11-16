@@ -71,7 +71,7 @@ class SettingsManager:
             self.__setWmsConnections()
             self.__setPlugins()
 
-            self.iface.messageBar().pushMessage(u"Installation", u"Paramètres SITNyon importés (version 1.3.4), redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
+            self.iface.messageBar().pushMessage(u"Installation", u"Paramètres SITNyon importés (version 1.3.5), redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
 
     def __setOptions(self):
 
