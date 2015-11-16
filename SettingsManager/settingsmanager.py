@@ -151,7 +151,7 @@ class SettingsManager:
     def __setWmsConnections(self):
 
         # ASIT VD
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/url", u"https://secure.asitvd.ch/proxy/ogc/asitvd-wms-fonds")
+        self.settings.setValue("Qgis/connections-wms/ASIT VD/url", u"https://secure.asitvd.ch/proxy/asitvd-wms-fonds")
         self.settings.setValue("Qgis/connections-wms/ASIT VD/dpiMode", 7)
         self.settings.setValue("Qgis/connections-wms/ASIT VD/ignoreAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetFeatureInfoURI", False)
@@ -196,7 +196,7 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/Swisstopo/smoothPixmapTransform", False)
 
         # Vaud
-        self.settings.setValue("Qgis/connections-wms/Vaud/url", u"https://secure.asitvd.ch/proxy/ogc/vd-wms")
+        self.settings.setValue("Qgis/connections-wms/Vaud/url", u"http://wms.vd.ch/public/services/VD_WMS/Mapserver/Wmsserver")
         self.settings.setValue("Qgis/connections-wms/Vaud/dpiMode", 7)
         self.settings.setValue("Qgis/connections-wms/Vaud/ignoreAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/Vaud/ignoreGetFeatureInfoURI", False)
