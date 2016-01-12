@@ -78,7 +78,7 @@ Features
 * Configure plugin
     * QuickFinder
 
-[List of useful plugins](doc/plugins.md)
+[List of useful plugins](https://github.com/sitnyon/documentation/blob/master/doc/qgis-plugins.md)
 
 Installation
 ------------
