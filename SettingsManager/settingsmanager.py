@@ -32,6 +32,7 @@ import os.path
 class SettingsManager:
 
     GEODATA_PATH = os.path.normpath("S:\\")
+    PROJECTION = u"EPSG:21781"
     settings = QSettings()
 
     def __init__(self, iface):
@@ -105,12 +106,12 @@ class SettingsManager:
         # CRS
         settings.setValue("Projections/otfTransformAutoEnable", False)
         settings.setValue("Projections/otfTransformEnabled", False)
-        settings.setValue("Projections/projectDefaultCrs", u"EPSG:21781")
-        settings.setValue("Projections/layerDefaultCrs", u"EPSG:21781")
+        settings.setValue("Projections/projectDefaultCrs", self.PROJECTION)
+        settings.setValue("Projections/layerDefaultCrs", self.PROJECTION)
         settings.setValue("Projections/defaultBehaviour", u"useGlobal")
-        settings.setValue("UI/recentProjectionsAuthId", u"EPSG:21781")
-        settings.setValue("UI/recentProjections", 1919)
-        settings.setValue("UI/recentProjectionsProj4", u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs")
+        settings.setValue("UI/recentProjectionsAuthId", self.PROJECTION)
+        settings.setValue("UI/recentProjections", 1919) # EPSG:21781
+        settings.setValue("UI/recentProjectionsProj4", u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs") # EPSG:21781
 
         # Network
         settings.setValue("proxy/proxyEnabled", True)
@@ -239,5 +240,5 @@ class SettingsManager:
 
         plugin.setValue("geomapfish", True)
         plugin.setValue("geomapfishUrl", u"https://map.nyon.ch/search")
-        plugin.setValue("geomapfishCrs", u"EPSG:21781")
+        plugin.setValue("geomapfishCrs", self.PROJECTION)
         plugin.setValue("osm", False)
