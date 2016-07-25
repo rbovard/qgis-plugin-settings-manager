@@ -68,13 +68,14 @@ Features
 
 ### Plugins
 
+* Check for updates on startup
+* Allow experimental plugins
+
 | Enabled       | Disabled  |
 | ------------- | --------- |
 | SpatialQuery  | GRASS     |
 | *QuickFinder* | RoadGraph |
 
-* Check for updates on startup
-* Allow experimental plugins
 * Configure plugin
     * QuickFinder
 
