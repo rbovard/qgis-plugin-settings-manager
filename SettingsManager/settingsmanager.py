@@ -32,6 +32,7 @@ import os.path
 class SettingsManager:
 
     GEODATA_PATH = os.path.normpath("S:\\")
+    PROJECTION = u"EPSG:21781"
     settings = QSettings()
 
     def __init__(self, iface):
@@ -75,149 +76,159 @@ class SettingsManager:
 
     def __setOptions(self):
 
+        settings = self.settings
+
         # General
-        self.settings.setValue("Qgis/showTips216", False)
-        self.settings.setValue("Qgis/projOpenAtLaunch", 0)
-        self.settings.setValue("Qgis/newProjectDefault", True)
+        settings.setValue("Qgis/showTips216", False)
+        settings.setValue("Qgis/projOpenAtLaunch", 0)
+        settings.setValue("Qgis/newProjectDefault", True)
 
         # System
-        self.settings.setValue("svg/searchPathsForSVG", os.path.join(self.GEODATA_PATH, "Impression\Symboles"))
+        settings.setValue("svg/searchPathsForSVG", os.path.join(self.GEODATA_PATH, "Impression\Symboles"))
 
         # Data sources
-        self.settings.setValue("Qgis/nullValue", "")
-        self.settings.setValue("Qgis/addPostgisDC", True)
+        settings.setValue("Qgis/nullValue", "")
+        settings.setValue("Qgis/addPostgisDC", True)
 
         # Map tools
-        self.settings.setValue("Map/identifyMode", 3)
-        self.settings.setValue("Map/identifyAutoFeatureForm", True)
-        self.settings.setValue("Map/scales", u"1:100000,1:50000,1:25000,1:10000,1:5000,1:2500,1:1000,1:500,1:250,1:100")
+        settings.setValue("Map/identifyMode", 3)
+        settings.setValue("Map/identifyAutoFeatureForm", True)
+        settings.setValue("Map/scales", u"1:100000,1:50000,1:25000,1:10000,1:5000,1:2500,1:1000,1:500,1:250,1:100")
 
         # Composer
-        self.settings.setValue("Composer/defaultFont", u"Gill Sans MT")
+        settings.setValue("Composer/defaultFont", u"Gill Sans MT")
 
         # Digitizing
-        self.settings.setValue("Qgis/digitizing/default_snap_mode", u"to vertex and segment")
-        self.settings.setValue("Qgis/digitizing/default_snapping_tolerance", 5)
-        self.settings.setValue("Qgis/digitizing/default_snapping_tolerance_unit", 1)
+        settings.setValue("Qgis/digitizing/default_snap_mode", u"to vertex and segment")
+        settings.setValue("Qgis/digitizing/default_snapping_tolerance", 5)
+        settings.setValue("Qgis/digitizing/default_snapping_tolerance_unit", 1)
 
         # CRS
-        self.settings.setValue("Projections/otfTransformAutoEnable", False)
-        self.settings.setValue("Projections/otfTransformEnabled", False)
-        self.settings.setValue("Projections/projectDefaultCrs", u"EPSG:21781")
-        self.settings.setValue("Projections/layerDefaultCrs", u"EPSG:21781")
-        self.settings.setValue("Projections/defaultBehaviour", u"useGlobal")
-        self.settings.setValue("UI/recentProjectionsAuthId", u"EPSG:21781")
-        self.settings.setValue("UI/recentProjections", 1919)
-        self.settings.setValue("UI/recentProjectionsProj4", u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs")
+        settings.setValue("Projections/otfTransformAutoEnable", False)
+        settings.setValue("Projections/otfTransformEnabled", False)
+        settings.setValue("Projections/projectDefaultCrs", self.PROJECTION)
+        settings.setValue("Projections/layerDefaultCrs", self.PROJECTION)
+        settings.setValue("Projections/defaultBehaviour", u"useGlobal")
+        settings.setValue("UI/recentProjectionsAuthId", self.PROJECTION)
+        settings.setValue("UI/recentProjections", 1919) # EPSG:21781
+        settings.setValue("UI/recentProjectionsProj4", u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs") # EPSG:21781
 
         # Network
-        self.settings.setValue("proxy/proxyEnabled", True)
-        self.settings.setValue("proxy/proxyType", u"DefaultProxy")
+        settings.setValue("proxy/proxyEnabled", True)
+        settings.setValue("proxy/proxyType", u"DefaultProxy")
 
     def __setToolbarsVisibility(self):
 
+        iface = self.iface
+
         # Visible
-        self.iface.attributesToolBar().setVisible(True)
-        self.iface.digitizeToolBar().setVisible(True)
-        self.iface.fileToolBar().setVisible(True)
-        self.iface.layerToolBar().setVisible(True)
-        self.iface.mapNavToolToolBar().setVisible(True)
+        iface.attributesToolBar().setVisible(True)
+        iface.digitizeToolBar().setVisible(True)
+        iface.fileToolBar().setVisible(True)
+        iface.layerToolBar().setVisible(True)
+        iface.mapNavToolToolBar().setVisible(True)
 
         # Hidden
-        self.iface.advancedDigitizeToolBar().setVisible(False)
-        self.iface.databaseToolBar().setVisible(False)
-        self.iface.helpToolBar().setVisible(False)
-        self.iface.pluginToolBar().setVisible(False)
-        self.iface.rasterToolBar().setVisible(False)
-        self.iface.vectorToolBar().setVisible(False)
-        self.iface.webToolBar().setVisible(False)
-        self.iface.mainWindow().findChild(QToolBar, "mLabelToolBar").setVisible(False)
+        iface.advancedDigitizeToolBar().setVisible(False)
+        iface.databaseToolBar().setVisible(False)
+        iface.helpToolBar().setVisible(False)
+        iface.pluginToolBar().setVisible(False)
+        iface.rasterToolBar().setVisible(False)
+        iface.vectorToolBar().setVisible(False)
+        iface.webToolBar().setVisible(False)
+        iface.mainWindow().findChild(QToolBar, "mLabelToolBar").setVisible(False)
 
     def __setPaths(self):
 
+        settings = self.settings
+
         # Favourites
-        self.settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, "Donnees")])
+        settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, "Donnees")])
 
         # Last paths
-        self.settings.setValue("UI/lastProjectDir", os.path.join(self.GEODATA_PATH, "Projets"))
-        self.settings.setValue("UI/lastVectorFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees"))
-        self.settings.setValue("UI/lastRasterFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees\Orthophotos"))
-        self.settings.setValue("Qgis/last_embedded_project_path", os.path.join(self.GEODATA_PATH, "Projets"))
+        settings.setValue("UI/lastProjectDir", os.path.join(self.GEODATA_PATH, "Projets"))
+        settings.setValue("UI/lastVectorFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees"))
+        settings.setValue("UI/lastRasterFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees\Orthophotos"))
+        settings.setValue("Qgis/last_embedded_project_path", os.path.join(self.GEODATA_PATH, "Projets"))
 
         # File filter
-        self.settings.setValue("UI/lastVectorFileFilter", "ESRI Shapefiles (*.shp *.SHP)")
+        settings.setValue("UI/lastVectorFileFilter", "ESRI Shapefiles (*.shp *.SHP)")
 
     def __setWmsConnections(self):
 
+        settings = self.settings
+
         # ASIT VD
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/url", u"https://secure.asitvd.ch/proxy/asitvd-wms-fonds")
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/ASIT VD/smoothPixmapTransform", False)
-        self.settings.setValue("Qgis/WMS/ASIT VD/username", u"vdn")
+        settings.setValue("Qgis/connections-wms/ASIT VD/url", u"https://secure.asitvd.ch/proxy/asitvd-wms-fonds")
+        settings.setValue("Qgis/connections-wms/ASIT VD/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/ASIT VD/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/ASIT VD/smoothPixmapTransform", False)
+        settings.setValue("Qgis/WMS/ASIT VD/username", u"vdn")
 
         # GeoPlaNet
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/url", u"http://www.geo.vd.ch/main/wsgi/mapserv_proxy")
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False)
+        settings.setValue("Qgis/connections-wms/GeoPlaNet/url", u"http://www.geo.vd.ch/main/wsgi/mapserv_proxy")
+        settings.setValue("Qgis/connections-wms/GeoPlaNet/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/GeoPlaNet/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/GeoPlaNet/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False)
 
         # SITNyon
-        self.settings.setValue("Qgis/connections-wms/SITNyon/url", u"https://map.nyon.ch/prod/wsgi/mapserv_proxy")
-        self.settings.setValue("Qgis/connections-wms/SITNyon/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon/smoothPixmapTransform", False)
+        settings.setValue("Qgis/connections-wms/SITNyon/url", u"https://map.nyon.ch/prod/wsgi/mapserv_proxy")
+        settings.setValue("Qgis/connections-wms/SITNyon/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/SITNyon/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/SITNyon/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/SITNyon/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/SITNyon/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/SITNyon/smoothPixmapTransform", False)
 
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/url", u"https://map.nyon.ch/prod/tiles/1.0.0/WMTSCapabilities-prod.xml")
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/smoothPixmapTransform", False)
+        settings.setValue("Qgis/connections-wms/SITNyon WMTS/url", u"https://map.nyon.ch/prod/tiles/1.0.0/WMTSCapabilities-prod.xml")
+        settings.setValue("Qgis/connections-wms/SITNyon WMTS/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/SITNyon WMTS/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/SITNyon WMTS/smoothPixmapTransform", False)
 
         # Swisstopo
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/url", u"https://wms.geo.admin.ch/?lang=fr")
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/smoothPixmapTransform", False)
+        settings.setValue("Qgis/connections-wms/Swisstopo/url", u"https://wms.geo.admin.ch/?lang=fr")
+        settings.setValue("Qgis/connections-wms/Swisstopo/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/Swisstopo/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/Swisstopo/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/Swisstopo/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/Swisstopo/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/Swisstopo/smoothPixmapTransform", False)
 
         # Vaud
-        self.settings.setValue("Qgis/connections-wms/Vaud/url", u"http://wms.vd.ch/public/services/VD_WMS/Mapserver/Wmsserver")
-        self.settings.setValue("Qgis/connections-wms/Vaud/dpiMode", 7)
-        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreGetFeatureInfoURI", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/ignoreGetMapURI", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
-        self.settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
+        settings.setValue("Qgis/connections-wms/Vaud/url", u"http://wms.vd.ch/public/services/VD_WMS/Mapserver/Wmsserver")
+        settings.setValue("Qgis/connections-wms/Vaud/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/Vaud/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/Vaud/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/Vaud/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/Vaud/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/Vaud/smoothPixmapTransform", False)
 
     def __setPlugins(self):
 
+        settings = self.settings
+
         # Enable plugins
-        self.settings.setValue("Plugins/spatialqueryplugin", True)
+        settings.setValue("Plugins/spatialqueryplugin", True)
 
         # Disable plugins
-        self.settings.setValue("Plugins/grassplugin", False)
-        self.settings.setValue("Plugins/roadgraphplugin", False)
+        settings.setValue("Plugins/grassplugin", False)
+        settings.setValue("Plugins/roadgraphplugin", False)
 
         # Check updates
-        self.settings.setValue("Qgis/plugin-installer/checkOnStart", True)
-        self.settings.setValue("Qgis/plugin-installer/checkOnStartInterval", 7)
+        settings.setValue("Qgis/plugin-installer/checkOnStart", True)
+        settings.setValue("Qgis/plugin-installer/checkOnStartInterval", 7)
 
         # Experimental plugins
-        self.settings.setValue("Qgis/plugin-installer/allowExperimental", True) # Allows experimental plugins but doesn't check the checkbox...
+        settings.setValue("Qgis/plugin-installer/allowExperimental", True) # Allows experimental plugins but doesn't check the checkbox...
 
         # Plugin QuickFinder
         self.__setPluginQuickFinder()
@@ -225,9 +236,9 @@ class SettingsManager:
     def __setPluginQuickFinder(self):
 
         self.settings.setValue("PythonPlugins/quickfinder", True)
-        pluginSettings = QSettings("quickfinder_plugin", "quickfinder_plugin")
+        plugin = QSettings("quickfinder_plugin", "quickfinder_plugin")
 
-        pluginSettings.setValue("geomapfish", True)
-        pluginSettings.setValue("geomapfishUrl", u"https://map.nyon.ch/search")
-        pluginSettings.setValue("geomapfishCrs", u"EPSG:21781")
-        pluginSettings.setValue("osm", False)
+        plugin.setValue("geomapfish", True)
+        plugin.setValue("geomapfishUrl", u"https://map.nyon.ch/search")
+        plugin.setValue("geomapfishCrs", self.PROJECTION)
+        plugin.setValue("osm", False)
