@@ -170,7 +170,7 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False)
 
         # SITNyon
-        self.settings.setValue("Qgis/connections-wms/SITNyon/url", u"http://map.nyon.ch/prod/wsgi/mapserv_proxy")
+        self.settings.setValue("Qgis/connections-wms/SITNyon/url", u"https://map.nyon.ch/prod/wsgi/mapserv_proxy")
         self.settings.setValue("Qgis/connections-wms/SITNyon/dpiMode", 7)
         self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/SITNyon/ignoreGetFeatureInfoURI", False)
@@ -178,7 +178,7 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/SITNyon/invertAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/SITNyon/smoothPixmapTransform", False)
 
-        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/url", u"http://map.nyon.ch/prod/tiles/1.0.0/WMTSCapabilities.xml")
+        self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/url", u"https://map.nyon.ch/prod/tiles/1.0.0/WMTSCapabilities-prod.xml")
         self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/dpiMode", 7)
         self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreGetFeatureInfoURI", False)
@@ -187,7 +187,7 @@ class SettingsManager:
         self.settings.setValue("Qgis/connections-wms/SITNyon WMTS/smoothPixmapTransform", False)
 
         # Swisstopo
-        self.settings.setValue("Qgis/connections-wms/Swisstopo/url", u"http://wms.geo.admin.ch/?lang=fr")
+        self.settings.setValue("Qgis/connections-wms/Swisstopo/url", u"https://wms.geo.admin.ch/?lang=fr")
         self.settings.setValue("Qgis/connections-wms/Swisstopo/dpiMode", 7)
         self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreAxisOrientation", False)
         self.settings.setValue("Qgis/connections-wms/Swisstopo/ignoreGetFeatureInfoURI", False)
@@ -229,6 +229,6 @@ class SettingsManager:
         pluginSettings = QSettings("quickfinder_plugin", "quickfinder_plugin")
 
         pluginSettings.setValue("geomapfish", True)
-        pluginSettings.setValue("geomapfishUrl", u"http://map.nyon.ch/search")
+        pluginSettings.setValue("geomapfishUrl", u"https://map.nyon.ch/search")
         pluginSettings.setValue("geomapfishCrs", u"EPSG:21781")
         pluginSettings.setValue("osm", False)
