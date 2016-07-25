@@ -70,7 +70,7 @@ class SettingsManager:
             self.__setToolbarsVisibility()
             self.__setPaths()
             self.__setWmsConnections()
-            #self.__setPlugins()
+            self.__setPlugins()
 
             self.iface.messageBar().pushMessage(u"Installation", u"Paramètres SITNyon importés (version 2.16.0.dev), redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
 
@@ -216,29 +216,31 @@ class SettingsManager:
 
         settings = self.settings
 
-        # Enable plugins
-        settings.setValue("Plugins/spatialqueryplugin", True)
-
-        # Disable plugins
-        settings.setValue("Plugins/grassplugin", False)
-        settings.setValue("Plugins/roadgraphplugin", False)
-
-        # Check updates
+        # Settings
         settings.setValue("Qgis/plugin-installer/checkOnStart", True)
         settings.setValue("Qgis/plugin-installer/checkOnStartInterval", 7)
-
-        # Experimental plugins
         settings.setValue("Qgis/plugin-installer/allowExperimental", True) # Allows experimental plugins but doesn't check the checkbox...
+
+        # Enable plugins
+        settings.setValue("Plugins/libspatialqueryplugin", True)
+
+        # Disable plugins
+        settings.setValue("Plugins/libgrassplugin7", False)
+        settings.setValue("Plugins/libroadgraphplugin", False)
+        settings.setValue("PythonPlugins/SettingsManager", False)
 
         # Plugin QuickFinder
         self.__setPluginQuickFinder()
 
     def __setPluginQuickFinder(self):
 
-        self.settings.setValue("PythonPlugins/quickfinder", True)
-        plugin = QSettings("quickfinder_plugin", "quickfinder_plugin")
+        settings = self.settings
 
-        plugin.setValue("geomapfish", True)
-        plugin.setValue("geomapfishUrl", u"https://map.nyon.ch/search")
-        plugin.setValue("geomapfishCrs", self.PROJECTION)
-        plugin.setValue("osm", False)
+        # Enable plugin
+        settings.setValue("PythonPlugins/quickfinder", True)
+
+        # Settings
+        settings.setValue("Plugins/quickfinder_plugin/geomapfish", True)
+        settings.setValue("Plugins/quickfinder_plugin/geomapfishUrl", u"https://map.nyon.ch/search")
+        settings.setValue("Plugins/quickfinder_plugin/geomapfishCrs", self.PROJECTION)
+        settings.setValue("Plugins/quickfinder_plugin/osm", False)
