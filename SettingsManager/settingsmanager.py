@@ -68,7 +68,7 @@ class SettingsManager:
         if result == 1:
             self.__setOptions()
             self.__setToolbarsVisibility()
-            #self.__setPaths()
+            self.__setPaths()
             #self.__setWmsConnections()
             #self.__setPlugins()
 
