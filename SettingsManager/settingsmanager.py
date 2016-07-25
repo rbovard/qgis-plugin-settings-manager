@@ -67,7 +67,7 @@ class SettingsManager:
 
         if result == 1:
             self.__setOptions()
-            #self.__setToolbarsVisibility()
+            self.__setToolbarsVisibility()
             #self.__setPaths()
             #self.__setWmsConnections()
             #self.__setPlugins()
@@ -132,11 +132,11 @@ class SettingsManager:
         iface.advancedDigitizeToolBar().setVisible(False)
         iface.databaseToolBar().setVisible(False)
         iface.helpToolBar().setVisible(False)
+        iface.mainWindow().findChild(QToolBar, "mLabelToolBar").setVisible(False)
         iface.pluginToolBar().setVisible(False)
         iface.rasterToolBar().setVisible(False)
         iface.vectorToolBar().setVisible(False)
         iface.webToolBar().setVisible(False)
-        iface.mainWindow().findChild(QToolBar, "mLabelToolBar").setVisible(False)
 
     def __setPaths(self):
 
