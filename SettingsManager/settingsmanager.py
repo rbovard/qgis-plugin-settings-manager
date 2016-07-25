@@ -65,7 +65,7 @@ class SettingsManager:
         result = self.dlg.exec_()
 
         if result == 1:
-            #self.__setOptions()
+            self.__setOptions()
             #self.__setToolbarsVisibility()
             #self.__setPaths()
             #self.__setWmsConnections()
@@ -76,7 +76,7 @@ class SettingsManager:
     def __setOptions(self):
 
         # General
-        self.settings.setValue("Qgis/showTips", False)
+        self.settings.setValue("Qgis/showTips216", False)
         self.settings.setValue("Qgis/projOpenAtLaunch", 0)
         self.settings.setValue("Qgis/newProjectDefault", True)
 
@@ -98,6 +98,7 @@ class SettingsManager:
         # Digitizing
         self.settings.setValue("Qgis/digitizing/default_snap_mode", u"to vertex and segment")
         self.settings.setValue("Qgis/digitizing/default_snapping_tolerance", 5)
+        self.settings.setValue("Qgis/digitizing/default_snapping_tolerance_unit", 1)
 
         # CRS
         self.settings.setValue("Projections/otfTransformAutoEnable", False)
@@ -105,15 +106,13 @@ class SettingsManager:
         self.settings.setValue("Projections/projectDefaultCrs", u"EPSG:21781")
         self.settings.setValue("Projections/layerDefaultCrs", u"EPSG:21781")
         self.settings.setValue("Projections/defaultBehaviour", u"useGlobal")
+        self.settings.setValue("UI/recentProjectionsAuthId", u"EPSG:21781")
         self.settings.setValue("UI/recentProjections", 1919)
         self.settings.setValue("UI/recentProjectionsProj4", u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs")
-        self.settings.setValue("UI/recentProjectionsAuthId", u"EPSG:21781")
 
         # Network
         self.settings.setValue("proxy/proxyEnabled", True)
-        self.settings.setValue("proxy/proxyHost", u"193.135.104.6")
-        self.settings.setValue("proxy/proxyPort", 8080)
-        self.settings.setValue("proxy/proxyType", u"HttpProxy")
+        self.settings.setValue("proxy/proxyType", u"DefaultProxy")
 
     def __setToolbarsVisibility(self):
 
