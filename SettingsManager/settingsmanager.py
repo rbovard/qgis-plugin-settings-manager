@@ -65,11 +65,11 @@ class SettingsManager:
         result = self.dlg.exec_()
 
         if result == 1:
-            self.__setOptions()
-            self.__setToolbarsVisibility()
-            self.__setPaths()
-            self.__setWmsConnections()
-            self.__setPlugins()
+            #self.__setOptions()
+            #self.__setToolbarsVisibility()
+            #self.__setPaths()
+            #self.__setWmsConnections()
+            #self.__setPlugins()
 
             self.iface.messageBar().pushMessage(u"Installation", u"Paramètres SITNyon importés (version 2.16.0.dev), redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
 
