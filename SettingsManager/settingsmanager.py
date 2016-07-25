@@ -69,7 +69,7 @@ class SettingsManager:
             self.__setOptions()
             self.__setToolbarsVisibility()
             self.__setPaths()
-            #self.__setWmsConnections()
+            self.__setWmsConnections()
             #self.__setPlugins()
 
             self.iface.messageBar().pushMessage(u"Installation", u"Paramètres SITNyon importés (version 2.16.0.dev), redémarrer QGIS pour terminer l'installation.", level = QgsMessageBar.INFO)
@@ -186,13 +186,13 @@ class SettingsManager:
         settings.setValue("Qgis/connections-wms/SITNyon/invertAxisOrientation", False)
         settings.setValue("Qgis/connections-wms/SITNyon/smoothPixmapTransform", False)
 
-        settings.setValue("Qgis/connections-wms/SITNyon WMTS/url", u"https://map.nyon.ch/prod/tiles/1.0.0/WMTSCapabilities-prod.xml")
-        settings.setValue("Qgis/connections-wms/SITNyon WMTS/dpiMode", 7)
-        settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreAxisOrientation", False)
-        settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreGetFeatureInfoURI", False)
-        settings.setValue("Qgis/connections-wms/SITNyon WMTS/ignoreGetMapURI", False)
-        settings.setValue("Qgis/connections-wms/SITNyon WMTS/invertAxisOrientation", False)
-        settings.setValue("Qgis/connections-wms/SITNyon WMTS/smoothPixmapTransform", False)
+        settings.setValue("Qgis/connections-wms/SITNyon (WMTS)/url", u"https://map.nyon.ch/prod/tiles/1.0.0/WMTSCapabilities-prod.xml")
+        settings.setValue("Qgis/connections-wms/SITNyon (WMTS)/dpiMode", 7)
+        settings.setValue("Qgis/connections-wms/SITNyon (WMTS)/ignoreAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/SITNyon (WMTS)/ignoreGetFeatureInfoURI", False)
+        settings.setValue("Qgis/connections-wms/SITNyon (WMTS)/ignoreGetMapURI", False)
+        settings.setValue("Qgis/connections-wms/SITNyon (WMTS)/invertAxisOrientation", False)
+        settings.setValue("Qgis/connections-wms/SITNyon (WMTS)/smoothPixmapTransform", False)
 
         # Swisstopo
         settings.setValue("Qgis/connections-wms/Swisstopo/url", u"https://wms.geo.admin.ch/?lang=fr")
