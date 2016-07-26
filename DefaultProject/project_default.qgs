@@ -38,11 +38,11 @@
   <legend updateDrawingOrder="true"/>
   <projectlayers/>
   <properties>
-    <WMSContactPerson type="QString"></WMSContactPerson>
     <Variables>
       <variableNames type="QStringList"/>
       <variableValues type="QStringList"/>
     </Variables>
+    <WMSContactPerson type="QString"></WMSContactPerson>
     <WMSOnlineResource type="QString"></WMSOnlineResource>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
@@ -55,9 +55,9 @@
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
     <WFSLayers type="QStringList"/>
+    <WMSRestrictedLayers type="QStringList"/>
     <WMSContactMail type="QString"></WMSContactMail>
     <WMSRestrictedComposers type="QStringList"/>
-    <WMSRestrictedLayers type="QStringList"/>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
       <Automatic type="bool">true</Automatic>
