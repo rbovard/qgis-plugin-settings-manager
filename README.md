@@ -89,9 +89,13 @@ Installation
 Copy the folder `SettingsManager` into `C:\Users\<username>\.qgis2\python\plugins`.
 > The files `Makefile`, `resources.qrc` and `ui_settingsmanager.ui` are not necessary.
 
+Copy the file `DefaultProject/project_default.qgs` into `C:\Users\<username>\.qgis2`.
+
 ### Linux
 Build the plugin with Makefile:
 
 ```bash
 make deploy
 ```
+
+Copy the file `DefaultProject/project_default.qgs` into `~/.qgis2`.
