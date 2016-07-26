@@ -76,6 +76,7 @@ class SettingsManager:
             self.__set_paths()
             self.__set_browser()
             self.__set_wms_connections()
+            self.__set_postgis_connections()
             self.__set_plugins()
 
             self.iface.messageBar().pushMessage(
@@ -365,6 +366,158 @@ class SettingsManager:
         )
         settings.setValue(
             "Qgis/connections-wms/Vaud/smoothPixmapTransform", False
+        )
+
+    def __set_postgis_connections(self):
+
+        settings = self.settings
+
+        # SITNyon
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/host", u"pollux"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/port", 5432)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/database", u"sitnyon"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/sslmode", 1)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/saveUsername", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/savePassword", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/geometryColumnsOnly", True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/dontResolveType", True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/publicOnly", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/allowGeometrylessTables", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/estimatedMetadata", False
+        )
+
+        # SITNyon (alcor)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/host", u"pollux"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/port", 5432)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/database", u"sitnyon_alcor"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/sslmode", 1)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/saveUsername", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/savePassword", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/geometryColumnsOnly", True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/dontResolveType", True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/publicOnly", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/allowGeometrylessTables",
+            False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/estimatedMetadata", False
+        )
+
+        # SITNyon (developpement)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/host", u"pollux"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/port", 5432)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/database",
+            u"sitnyon_developpement"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/sslmode", 1)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/saveUsername",
+            False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/savePassword",
+            False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/" +
+            "geometryColumnsOnly",
+            True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/dontResolveType",
+            True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/publicOnly", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/" +
+            "allowGeometrylessTables",
+            False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/estimatedMetadata",
+            False
+        )
+
+        # SITNyon (formation)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/host", u"pollux"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/port", 5432)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/database",
+            u"sitnyon_formation"
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/sslmode", 1)
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/saveUsername", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/savePassword", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/geometryColumnsOnly",
+            True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/dontResolveType",
+            True
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/publicOnly", False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/" +
+            "allowGeometrylessTables",
+            False
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/estimatedMetadata",
+            False
         )
 
     def __set_plugins(self):

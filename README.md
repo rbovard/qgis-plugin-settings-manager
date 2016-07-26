@@ -7,6 +7,7 @@ Settings Manager
     * [Paths](#paths)
     * [Browser](#browser)
     * [WMS connections](#wms-connections)
+    * [PostGIS connections](#postgis-connections)
     * [Plugins](#plugins)
 * [Installation](#installation)
     * [Windows](#windows)
@@ -71,6 +72,13 @@ Features
 * SITNyon
 * Swisstopo
 * Vaud
+
+### PostGIS connections
+
+* SITNyon
+* SITNyon (alcor)
+* SITNyon (developpement)
+* SITNyon (formation)
 
 ### Plugins
 
