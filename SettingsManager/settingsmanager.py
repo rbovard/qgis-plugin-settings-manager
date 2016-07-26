@@ -97,6 +97,7 @@ class SettingsManager:
 
         # Composer
         settings.setValue("Composer/defaultFont", u"Gill Sans MT")
+        settings.setValue("Composer/searchPathsForTemplates", os.path.join(self.GEODATA_PATH, "Impression\Modeles"))
 
         # Digitizing
         settings.setValue("Qgis/digitizing/default_snap_mode", u"to vertex and segment")

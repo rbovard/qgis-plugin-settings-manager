@@ -23,13 +23,14 @@ Features
 | **General**      | Don't show tips at start up            |
 |                  | Open new project on launch             |
 |                  | Use default project for new project    |
-| **System**       | Paths for SVG symbols                  |
+| **System**       | Path for SVG symbols                   |
 | **Data sources** | Representation for null values         |
 |                  | Add PostGIS layers with double click   |
 | **Map tools**    | Identify with layer selection          |
 |                  | Open feature form if one is identified |
 |                  | Predefined scales                      |
 | **Composer**     | Default font                           |
+|                  | Path for templates                     |
 | **Digitizing**   | Default snapping mode                  |
 |                  | Default snapping tolerance             |
 | **CRS**          | Disable on the fly reprojection        |
