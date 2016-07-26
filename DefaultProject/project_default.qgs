@@ -43,6 +43,17 @@
       <variableValues type="QStringList"/>
     </Variables>
     <WMSContactPerson type="QString"></WMSContactPerson>
+    <CopyrightLabel>
+      <FontName type="QString">MS Shell Dlg 2</FontName>
+      <FontSize type="int">8</FontSize>
+      <MarginV type="int">0</MarginV>
+      <MarginH type="int">0</MarginH>
+      <Enabled type="bool">true</Enabled>
+      <Placement type="int">3</Placement>
+      <MarginUnit type="QString">MM</MarginUnit>
+      <Label type="QString">&amp;copy; Géodonnées : Ville de Nyon, Etat de Vaud, swisstopo, OpenStreetMap</Label>
+      <Color type="QString">#323232</Color>
+    </CopyrightLabel>
     <WMSOnlineResource type="QString"></WMSOnlineResource>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
