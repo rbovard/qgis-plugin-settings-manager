@@ -5,6 +5,7 @@ Settings Manager
     * [Options](#options)
     * [Toolbars visibility](#toolbars)
     * [Paths](#paths)
+    * [Browser](#browser)
     * [WMS connections](#wms-connections)
     * [Plugins](#plugins)
 * [Installation](#installation)
@@ -53,11 +54,15 @@ Features
 
 ### Paths
 
-* Favourites
 * Last project
 * Last vector file
 * Last raster file
 * Last embedded project
+
+### Browser
+
+* Favourites
+* Hidden paths
 
 ### WMS connections
 

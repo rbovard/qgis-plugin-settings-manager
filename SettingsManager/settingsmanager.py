@@ -160,6 +160,9 @@ class SettingsManager:
         # Favourites
         settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, "Donnees")])
 
+        # Hidden paths
+        settings.setValue("browser/hiddenPaths", [u"S://Admin", u"S://Documentation", u"S://Impression", u"S://Outils", u"A:/", u"B:/", u"C:/", u"D:/", u"E:/", u"F:/", u"G:/", u"H:/", u"I:/", u"J:/", u"K:/", u"L:/", u"M:/", u"N:/", u"O:/", u"P:/", u"Q:/", u"R:/", u"T:/", u"U:/", u"V:/", u"W:/", u"X:/", u"Y:/", u"Z:/"])
+
     def __setWmsConnections(self):
 
         settings = self.settings
