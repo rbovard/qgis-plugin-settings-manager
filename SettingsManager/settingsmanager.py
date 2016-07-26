@@ -69,6 +69,7 @@ class SettingsManager:
             self.__setOptions()
             self.__setToolbarsVisibility()
             self.__setPaths()
+            self.__setBrowser()
             self.__setWmsConnections()
             self.__setPlugins()
 
@@ -143,9 +144,6 @@ class SettingsManager:
 
         settings = self.settings
 
-        # Favourites
-        settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, "Donnees")])
-
         # Last paths
         settings.setValue("UI/lastProjectDir", os.path.join(self.GEODATA_PATH, "Projets"))
         settings.setValue("UI/lastVectorFileFilterDir", os.path.join(self.GEODATA_PATH, "Donnees"))
@@ -154,6 +152,13 @@ class SettingsManager:
 
         # File filter
         settings.setValue("UI/lastVectorFileFilter", "ESRI Shapefiles (*.shp *.SHP)")
+
+    def __setBrowser(self):
+
+        settings = self.settings
+
+        # Favourites
+        settings.setValue("browser/favourites", [os.path.join(self.GEODATA_PATH, "Donnees")])
 
     def __setWmsConnections(self):
 
