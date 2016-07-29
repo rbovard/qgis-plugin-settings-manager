@@ -106,7 +106,7 @@ Copy the folder `SettingsManager` into `C:\Users\<username>\.qgis2\python\plugin
 Copy the file `DefaultProject/project_default.qgs` into `C:\Users\<username>\.qgis2`.
 
 ### Linux
-Build the plugin with Makefile:
+Build the plugin with _make_:
 
 ```bash
 make deploy
