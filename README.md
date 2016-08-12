@@ -91,6 +91,7 @@ Features
 | *QuickFinder* | RoadGraph |
 
 * Configure plugin
+    * ProjectLauncher
     * QuickFinder
 
 [List of useful plugins](https://github.com/sitnyon/documentation/blob/master/doc/qgis-plugins.md)
