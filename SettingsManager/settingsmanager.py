@@ -540,12 +540,12 @@ class SettingsManager:
         settings.setValue("PythonPlugins/SettingsManager", False)
 
         # Plugin ProjectLauncher
-        self.__setPluginProjectLauncher()
+        self.__set_plugin_project_launcher()
 
         # Plugin QuickFinder
-        self.__setPluginQuickFinder()
+        self.__set_plugin_quick_finder()
 
-    def __setPluginProjectLauncher(self):
+    def __set_plugin_project_launcher(self):
 
         settings = self.settings
 
@@ -558,7 +558,7 @@ class SettingsManager:
             os.path.join(self.GEODATA_PATH, "Projets\projects.ini")
         )
 
-    def __setPluginQuickFinder(self):
+    def __set_plugin_quick_finder(self):
 
         settings = self.settings
 
