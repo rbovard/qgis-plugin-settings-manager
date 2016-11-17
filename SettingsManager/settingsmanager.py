@@ -347,7 +347,7 @@ class SettingsManager:
         # Vaud
         settings.setValue(
             "Qgis/connections-wms/Vaud/url",
-            u"http://wms.vd.ch/public/services/VD_WMS/Mapserver/Wmsserver"
+            u"http://wms.vd.ch/public/services/wmsVD/Mapserver/Wmsserver"
         )
         settings.setValue(
             "Qgis/connections-wms/Vaud/dpiMode", 7
