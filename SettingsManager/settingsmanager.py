@@ -81,7 +81,7 @@ class SettingsManager:
 
             self.iface.messageBar().pushMessage(
                 u"Installation",
-                u"Paramètres SITNyon importés (version 2.16.0.dev), " +
+                u"Paramètres SITNyon importés (version 2.18.0.dev), " +
                 u"redémarrer QGIS pour terminer l'installation.",
                 level = QgsMessageBar.INFO
             )
