@@ -539,24 +539,24 @@ class SettingsManager:
         settings.setValue("Plugins/libroadgraphplugin", False)
         settings.setValue("PythonPlugins/SettingsManager", False)
 
-        # Plugin ProjectLauncher
-        self.__set_plugin_project_launcher()
+#        # Plugin ProjectLauncher
+#        self.__set_plugin_project_launcher()
 
         # Plugin QuickFinder
         self.__set_plugin_quick_finder()
 
-    def __set_plugin_project_launcher(self):
-
-        settings = self.settings
-
-        # Enable plugin
-        settings.setValue("PythonPlugins/ProjectLauncher", True)
-
-        # Settings
-        settings.setValue(
-            "Plugins/ProjectLauncher/projects_list",
-            os.path.join(self.GEODATA_PATH, "Projets\projects.ini")
-        )
+#    def __set_plugin_project_launcher(self):
+#
+#        settings = self.settings
+#
+#        # Enable plugin
+#        settings.setValue("PythonPlugins/ProjectLauncher", True)
+#
+#        # Settings
+#        settings.setValue(
+#            "Plugins/ProjectLauncher/projects_list",
+#            os.path.join(self.GEODATA_PATH, "Projets\projects.ini")
+#        )
 
     def __set_plugin_quick_finder(self):
 
