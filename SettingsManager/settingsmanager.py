@@ -31,8 +31,10 @@ import os.path
 
 class SettingsManager:
 
+    PLUGIN_VERSION = u"2.18.0.dev"
     GEODATA_PATH = os.path.normpath("S:\\")
     PROJECTION = u"EPSG:21781"
+
     settings = QSettings()
 
     def __init__(self, iface):
@@ -81,7 +83,7 @@ class SettingsManager:
 
             self.iface.messageBar().pushMessage(
                 u"Installation",
-                u"Paramètres SITNyon importés (version 2.18.0.dev), " +
+                u"Paramètres SITNyon importés (version " + self.PLUGIN_VERSION + "), " +
                 u"redémarrer QGIS pour terminer l'installation.",
                 level = QgsMessageBar.INFO
             )
