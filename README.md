@@ -111,5 +111,3 @@ Build the plugin with _make_:
 ```bash
 make deploy
 ```
-
-Copy the file `DefaultProject/project_default.qgs` into `~/.qgis2`.

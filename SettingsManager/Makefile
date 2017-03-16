@@ -40,6 +40,8 @@ UI_FILES = ui_settingsmanager.py
 
 RESOURCE_FILES = resources_rc.py
 
+DEFAULT_PROJECT = project_default.qgs
+
 default: compile
 
 compile: $(UI_FILES) $(RESOURCE_FILES)
@@ -62,6 +64,7 @@ deploy: compile transcompile
 	cp -vf $(UI_FILES) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vf $(RESOURCE_FILES) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vf $(EXTRAS) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
+	cp -vf ../DefaultProject/$(DEFAULT_PROJECT) $(HOME)/$(QGISDIR)
 
 # The dclean target removes compiled python files from plugin directory
 # also delets any .svn entry
@@ -72,6 +75,7 @@ dclean:
 # The derase deletes deployed plugin
 derase:
 	rm -Rf $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
+	rm -f $(HOME)/$(QGISDIR)/$(DEFAULT_PROJECT)
 
 # The zip target deploys the plugin and creates a zip file with the deployed
 # content. You can then upload the zip file on http://plugins.qgis.org
