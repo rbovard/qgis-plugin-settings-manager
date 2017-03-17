@@ -31,7 +31,7 @@ import os.path
 
 class SettingsManager:
 
-    PLUGIN_VERSION = u"2.18.0.dev"
+    PLUGIN_VERSION = u"2.18.0"
     GEODATA_PATH = os.path.normpath("S:\\")
     PROJECTION = u"EPSG:21781"
 
