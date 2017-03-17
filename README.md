@@ -5,7 +5,9 @@ Settings Manager
     * [Options](#options)
     * [Toolbars visibility](#toolbars)
     * [Paths](#paths)
-    * [WMS connections](#wms-connections)
+    * [Browser](#browser)
+    * [WMS and WMTS connections](#wms-and-wmts-connections)
+    * [PostGIS connections](#postgis-connections)
     * [Plugins](#plugins)
 * [Installation](#installation)
     * [Windows](#windows)
@@ -20,16 +22,17 @@ Features
 
 | Category         | Option                                 |
 | ---------------- | -------------------------------------- |
-| **General**      | Don't show tips at start up            |
-|                  | Open new project on launch             |
+| **General**      | Do not show tips at start up           |
+|                  | Do not check QGIS version at start up  |
 |                  | Use default project for new project    |
-| **System**       | Paths for SVG symbols                  |
+| **System**       | Path for SVG symbols                   |
 | **Data sources** | Representation for null values         |
 |                  | Add PostGIS layers with double click   |
 | **Map tools**    | Identify with layer selection          |
 |                  | Open feature form if one is identified |
 |                  | Predefined scales                      |
 | **Composer**     | Default font                           |
+|                  | Path for templates                     |
 | **Digitizing**   | Default snapping mode                  |
 |                  | Default snapping tolerance             |
 | **CRS**          | Disable on the fly reprojection        |
@@ -43,22 +46,26 @@ Features
 | ------------   | -------------------- |
 | Attributes     | Advanced digitizing  |
 | Digitizing     | Database             |
-| File           | Help                 |
-| Manage layers  | Label                |
-| Map navigation | Plugins              |
+| Manage layers  | Help                 |
+| Map navigation | Label                |
+| Project        | Plugins              |
 |                | Raster               |
 |                | Vector               |
 |                | Web                  |
 
 ### Paths
 
-* Favourites
 * Last project
 * Last vector file
 * Last raster file
 * Last embedded project
 
-### WMS connections
+### Browser
+
+* Favourites
+* Hidden paths
+
+### WMS and WMTS connections
 
 * ASIT VD
 * GeoPlaNet
@@ -66,15 +73,23 @@ Features
 * Swisstopo
 * Vaud
 
+### PostGIS connections
+
+* SITNyon
+* SITNyon (alcor)
+* SITNyon (developpement)
+* SITNyon (formation)
+
 ### Plugins
+
+* Check for updates on startup
+* Allow experimental plugins
 
 | Enabled       | Disabled  |
 | ------------- | --------- |
 | SpatialQuery  | GRASS     |
 | *QuickFinder* | RoadGraph |
 
-* Check for updates on startup
-* Allow experimental plugins
 * Configure plugin
     * QuickFinder
 
@@ -85,11 +100,13 @@ Installation
 
 ### Windows
 
-Copy the folder `SettingsManager` into `C:\Users\<username>\.qgis2\python\plugins`.
+Copy the folder `SettingsManager` into `%USERPROFILE%\.qgis2\python\plugins`.
 > The files `Makefile`, `resources.qrc` and `ui_settingsmanager.ui` are not necessary.
 
+Copy the file `DefaultProject/project_default.qgs` into `%USERPROFILE%\.qgis2`.
+
 ### Linux
-Build the plugin with Makefile:
+Build the plugin with _make_:
 
 ```bash
 make deploy
