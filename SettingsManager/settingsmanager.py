@@ -93,8 +93,7 @@ class SettingsManager:
         settings = self.settings
 
         # General
-        settings.setValue("Qgis/showTips216", False)
-        settings.setValue("Qgis/projOpenAtLaunch", 0)
+        settings.setValue("Qgis/showTips218", False)
         settings.setValue("Qgis/newProjectDefault", True)
 
         # System

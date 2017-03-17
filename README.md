@@ -23,7 +23,6 @@ Features
 | Category         | Option                                 |
 | ---------------- | -------------------------------------- |
 | **General**      | Don't show tips at start up            |
-|                  | Open new project on launch             |
 |                  | Use default project for new project    |
 | **System**       | Path for SVG symbols                   |
 | **Data sources** | Representation for null values         |
@@ -46,9 +45,9 @@ Features
 | ------------   | -------------------- |
 | Attributes     | Advanced digitizing  |
 | Digitizing     | Database             |
-| File           | Help                 |
-| Manage layers  | Label                |
-| Map navigation | Plugins              |
+| Manage layers  | Help                 |
+| Map navigation | Label                |
+| Project        | Plugins              |
 |                | Raster               |
 |                | Vector               |
 |                | Web                  |

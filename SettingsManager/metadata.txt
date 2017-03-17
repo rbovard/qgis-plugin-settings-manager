@@ -1,10 +1,10 @@
 [general]
 name=Settings Manager
 qgisMinimumVersion=2.18
-description=Parametres SITNyon
-about=Configuration QGIS specifique pour les utilisateurs SITNyon
+description=Paramètres SITNyon
+about=Configuration QGIS spécifique pour les utilisateurs SITNyon
 version=2.18.0.dev
-author=Remi Bovard
+author=Rémi Bovard
 email=remi.bovard@nyon.ch
 
 homepage=https://github.com/sitnyon/qgis-plugin-settings-manager
