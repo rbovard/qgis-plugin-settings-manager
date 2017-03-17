@@ -94,6 +94,7 @@ class SettingsManager:
 
         # General
         settings.setValue("Qgis/showTips218", False)
+        settings.setValue("Qgis/checkVersion", False)
         settings.setValue("Qgis/newProjectDefault", True)
 
         # System

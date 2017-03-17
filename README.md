@@ -22,7 +22,8 @@ Features
 
 | Category         | Option                                 |
 | ---------------- | -------------------------------------- |
-| **General**      | Don't show tips at start up            |
+| **General**      | Do not show tips at start up           |
+|                  | Do not check QGIS version at start up  |
 |                  | Use default project for new project    |
 | **System**       | Path for SVG symbols                   |
 | **Data sources** | Representation for null values         |
