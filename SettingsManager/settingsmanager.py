@@ -244,7 +244,7 @@ class SettingsManager:
             "Qgis/connections-wms/ASIT VD/invertAxisOrientation", False
         )
         settings.setValue(
-            "Qgis/connections-wms/ASIT VD/smoothPixmapTransform", False
+            "Qgis/connections-wms/ASIT VD/smoothPixmapTransform", True
         )
         settings.setValue(
             "Qgis/WMS/ASIT VD/username", u"vdn"
@@ -271,7 +271,7 @@ class SettingsManager:
             "Qgis/connections-wms/GeoPlaNet/invertAxisOrientation", False
         )
         settings.setValue(
-            "Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", False
+            "Qgis/connections-wms/GeoPlaNet/smoothPixmapTransform", True
         )
 
         # SITNyon
@@ -295,7 +295,7 @@ class SettingsManager:
             "Qgis/connections-wms/SITNyon/invertAxisOrientation", False
         )
         settings.setValue(
-            "Qgis/connections-wms/SITNyon/smoothPixmapTransform", False
+            "Qgis/connections-wms/SITNyon/smoothPixmapTransform", True
         )
 
         settings.setValue(
@@ -318,7 +318,7 @@ class SettingsManager:
             "Qgis/connections-wms/SITNyon (WMTS)/invertAxisOrientation", False
         )
         settings.setValue(
-            "Qgis/connections-wms/SITNyon (WMTS)/smoothPixmapTransform", False
+            "Qgis/connections-wms/SITNyon (WMTS)/smoothPixmapTransform", True
         )
 
         # Swisstopo
@@ -342,7 +342,7 @@ class SettingsManager:
             "Qgis/connections-wms/Swisstopo/invertAxisOrientation", False
         )
         settings.setValue(
-            "Qgis/connections-wms/Swisstopo/smoothPixmapTransform", False
+            "Qgis/connections-wms/Swisstopo/smoothPixmapTransform", True
         )
 
         # Vaud
@@ -366,7 +366,7 @@ class SettingsManager:
             "Qgis/connections-wms/Vaud/invertAxisOrientation", False
         )
         settings.setValue(
-            "Qgis/connections-wms/Vaud/smoothPixmapTransform", False
+            "Qgis/connections-wms/Vaud/smoothPixmapTransform", True
         )
 
     def __set_postgis_connections(self):
