@@ -229,6 +229,9 @@ class SettingsManager:
             u"https://ows.asitvd.ch/wmts"
         )
         settings.setValue(
+            "Qgis/WMS/ASIT VD/authcfg", u"asitvd1"
+        )
+        settings.setValue(
             "Qgis/connections-wms/ASIT VD/dpiMode", 7
         )
         settings.setValue(
@@ -245,9 +248,6 @@ class SettingsManager:
         )
         settings.setValue(
             "Qgis/connections-wms/ASIT VD/smoothPixmapTransform", True
-        )
-        settings.setValue(
-            "Qgis/WMS/ASIT VD/username", u"vdn"
         )
 
         # GeoPlaNet
@@ -378,12 +378,17 @@ class SettingsManager:
             "PostgreSQL/connections/SITNyon/host", u"pollux"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon/port", 5432)
+            "PostgreSQL/connections/SITNyon/port", 5432
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon/database", u"sitnyon"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon/sslmode", 1)
+            "PostgreSQL/connections/SITNyon/sslmode", 1
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon/authcfg", u"pollux1"
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon/saveUsername", False
         )
@@ -411,12 +416,17 @@ class SettingsManager:
             "PostgreSQL/connections/SITNyon (alcor)/host", u"pollux"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/port", 5432)
+            "PostgreSQL/connections/SITNyon (alcor)/port", 5432
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon (alcor)/database", u"sitnyon_alcor"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/sslmode", 1)
+            "PostgreSQL/connections/SITNyon (alcor)/sslmode", 1
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (alcor)/authcfg", u"pollux1"
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon (alcor)/saveUsername", False
         )
@@ -445,13 +455,18 @@ class SettingsManager:
             "PostgreSQL/connections/SITNyon (developpement)/host", u"pollux"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon (developpement)/port", 5432)
+            "PostgreSQL/connections/SITNyon (developpement)/port", 5432
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon (developpement)/database",
             u"sitnyon_developpement"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon (developpement)/sslmode", 1)
+            "PostgreSQL/connections/SITNyon (developpement)/sslmode", 1
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (developpement)/authcfg", u"pollux1"
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon (developpement)/saveUsername",
             False
@@ -487,13 +502,18 @@ class SettingsManager:
             "PostgreSQL/connections/SITNyon (formation)/host", u"pollux"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon (formation)/port", 5432)
+            "PostgreSQL/connections/SITNyon (formation)/port", 5432
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon (formation)/database",
             u"sitnyon_formation"
         )
         settings.setValue(
-            "PostgreSQL/connections/SITNyon (formation)/sslmode", 1)
+            "PostgreSQL/connections/SITNyon (formation)/sslmode", 1
+        )
+        settings.setValue(
+            "PostgreSQL/connections/SITNyon (formation)/authcfg", u"pollux2"
+        )
         settings.setValue(
             "PostgreSQL/connections/SITNyon (formation)/saveUsername", False
         )
