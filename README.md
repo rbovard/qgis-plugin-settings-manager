@@ -6,7 +6,7 @@ Settings Manager
     * [Toolbars visibility](#toolbars)
     * [Paths](#paths)
     * [Browser](#browser)
-    * [WMS connections](#wms-connections)
+    * [WMS and WMTS connections](#wms-and-wmts-connections)
     * [PostGIS connections](#postgis-connections)
     * [Plugins](#plugins)
 * [Installation](#installation)
@@ -64,7 +64,7 @@ Features
 * Favourites
 * Hidden paths
 
-### WMS connections
+### WMS and WMTS connections
 
 * ASIT VD
 * GeoPlaNet

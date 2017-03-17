@@ -226,7 +226,7 @@ class SettingsManager:
         # ASIT VD
         settings.setValue(
             "Qgis/connections-wms/ASIT VD/url",
-            u"https://secure.asitvd.ch/proxy/asitvd-wms-fonds"
+            u"https://ows.asitvd.ch/wmts"
         )
         settings.setValue(
             "Qgis/connections-wms/ASIT VD/dpiMode", 7
