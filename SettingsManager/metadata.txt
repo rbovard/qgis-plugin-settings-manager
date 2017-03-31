@@ -3,7 +3,7 @@ name=Settings Manager
 qgisMinimumVersion=2.18
 description=SITNyon specific settings
 about=Settings Manager is a plugin to set default QGIS settings, specific for SITNyon users.
-version=2.18.0
+version=2.18.1
 author=Rémi Bovard
 email=remi.bovard@nyon.ch
 
