@@ -31,7 +31,7 @@ import os.path
 
 class SettingsManager:
 
-    PLUGIN_VERSION = u"2.18.0"
+    PLUGIN_VERSION = u"2.18.2"
     GEODATA_PATH = os.path.normpath("S:\\")
     PROJECTION = u"EPSG:21781"
 
@@ -117,7 +117,7 @@ class SettingsManager:
         )
 
         # Composer
-        settings.setValue("Composer/defaultFont", u"Gill Sans MT")
+        settings.setValue("Composer/defaultFont", u"Gill Sans Std Light")
         settings.setValue(
             "Composer/searchPathsForTemplates",
             os.path.join(self.GEODATA_PATH, "Impression\Modeles")
