@@ -117,7 +117,7 @@ class SettingsManager:
         )
 
         # Composer
-        settings.setValue("Composer/defaultFont", u"Gill Sans MT")
+        settings.setValue("Composer/defaultFont", u"Gill Sans Std Light")
         settings.setValue(
             "Composer/searchPathsForTemplates",
             os.path.join(self.GEODATA_PATH, "Impression\Modeles")
