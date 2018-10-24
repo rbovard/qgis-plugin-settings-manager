@@ -145,10 +145,6 @@ class SettingsManager:
             u"+towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs"
         ) # EPSG:2056
 
-        # Network
-        settings.setValue("proxy/proxyEnabled", True)
-        settings.setValue("proxy/proxyType", u"DefaultProxy")
-
     def __set_toolbars_visibility(self):
 
         iface = self.iface
