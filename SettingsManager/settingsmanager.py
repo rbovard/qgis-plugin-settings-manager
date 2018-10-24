@@ -33,7 +33,7 @@ class SettingsManager:
 
     PLUGIN_VERSION = u"2.18.2"
     GEODATA_PATH = os.path.normpath("S:\\")
-    PROJECTION = u"EPSG:21781"
+    PROJECTION = u"EPSG:2056"
 
     settings = QSettings()
 
@@ -137,13 +137,13 @@ class SettingsManager:
         settings.setValue("Projections/layerDefaultCrs", self.PROJECTION)
         settings.setValue("Projections/defaultBehaviour", u"useGlobal")
         settings.setValue("UI/recentProjectionsAuthId", self.PROJECTION)
-        settings.setValue("UI/recentProjections", 1919) # EPSG:21781
+        settings.setValue("UI/recentProjections", 47) # EPSG:2056
         settings.setValue(
             "UI/recentProjectionsProj4",
             u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 " +
-            u"+k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel " +
-            u"+towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs"
-        ) # EPSG:21781
+            u"+k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel " +
+            u"+towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs"
+        ) # EPSG:2056
 
         # Network
         settings.setValue("proxy/proxyEnabled", True)
