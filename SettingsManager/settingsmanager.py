@@ -31,9 +31,9 @@ import os.path
 
 class SettingsManager:
 
-    PLUGIN_VERSION = u"2.18.2"
+    PLUGIN_VERSION = u"2.18.3"
     GEODATA_PATH = os.path.normpath("S:\\")
-    PROJECTION = u"EPSG:21781"
+    PROJECTION = u"EPSG:2056"
 
     settings = QSettings()
 
@@ -137,17 +137,13 @@ class SettingsManager:
         settings.setValue("Projections/layerDefaultCrs", self.PROJECTION)
         settings.setValue("Projections/defaultBehaviour", u"useGlobal")
         settings.setValue("UI/recentProjectionsAuthId", self.PROJECTION)
-        settings.setValue("UI/recentProjections", 1919) # EPSG:21781
+        settings.setValue("UI/recentProjections", 47) # EPSG:2056
         settings.setValue(
             "UI/recentProjectionsProj4",
             u"+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 " +
-            u"+k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel " +
-            u"+towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs"
-        ) # EPSG:21781
-
-        # Network
-        settings.setValue("proxy/proxyEnabled", True)
-        settings.setValue("proxy/proxyType", u"DefaultProxy")
+            u"+k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel " +
+            u"+towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs"
+        ) # EPSG:2056
 
     def __set_toolbars_visibility(self):
 
@@ -410,45 +406,6 @@ class SettingsManager:
         )
         settings.setValue(
             "PostgreSQL/connections/SITNyon/estimatedMetadata", False
-        )
-
-        # SITNyon (alcor)
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/host", u"pollux"
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/port", 5432
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/database", u"sitnyon_alcor"
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/sslmode", 1
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/authcfg", u"pollux1"
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/saveUsername", False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/savePassword", False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/geometryColumnsOnly", True
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/dontResolveType", True
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/publicOnly", False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/allowGeometrylessTables",
-            False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/estimatedMetadata", False
         )
 
         # SITNyon (developpement)
