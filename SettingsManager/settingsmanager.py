@@ -412,45 +412,6 @@ class SettingsManager:
             "PostgreSQL/connections/SITNyon/estimatedMetadata", False
         )
 
-        # SITNyon (alcor)
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/host", u"pollux"
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/port", 5432
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/database", u"sitnyon_alcor"
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/sslmode", 1
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/authcfg", u"pollux1"
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/saveUsername", False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/savePassword", False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/geometryColumnsOnly", True
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/dontResolveType", True
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/publicOnly", False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/allowGeometrylessTables",
-            False
-        )
-        settings.setValue(
-            "PostgreSQL/connections/SITNyon (alcor)/estimatedMetadata", False
-        )
-
         # SITNyon (developpement)
         settings.setValue(
             "PostgreSQL/connections/SITNyon (developpement)/host", u"pollux"
