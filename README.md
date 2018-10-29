@@ -38,7 +38,6 @@ Features
 | **CRS**          | Disable on the fly reprojection        |
 |                  | Default projects CRS                   |
 |                  | Default layers CRS                     |
-| **Network**      | Use proxy for web access               |
 
 ### Toolbars
 
@@ -76,7 +75,6 @@ Features
 ### PostGIS connections
 
 * SITNyon
-* SITNyon (alcor)
 * SITNyon (developpement)
 * SITNyon (formation)
 
