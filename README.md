@@ -1,3 +1,5 @@
+**IMPORTANT: this QGIS 2.x plugin is no longer maintained.**
+
 Settings Manager
 ================
 
